@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NBA Playoffs 2026 | Latest Games, Highlights & Standings</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Follow the 2026 NBA Playoffs live — scores, standings, highlights, player spotlights, and more. Your ultimate hub for basketball coverage." />
+  <meta name="keywords" content="NBA Playoffs 2026, NBA scores, NBA standings, basketball highlights, OKC Thunder, San Antonio Spurs, New York Knicks, Cleveland Cavaliers" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://example.com/nba-playoffs" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="NBA Playoffs 2026 | Live Scores & Highlights" />
+  <meta property="og:description" content="The most complete NBA Playoffs coverage — live scores, standings, player spotlights, and breaking news." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/nba-playoffs" />
+  <meta property="og:image" content="https://example.com/og-nba.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NBA Playoffs 2026" />
+  <meta name="twitter:description" content="Live scores, standings, highlights, and more." />
+  <meta name="twitter:image" content="https://example.com/og-nba.jpg" />
+
+  <!-- Structured Data Placeholder -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsEvent",
+    "name": "NBA Playoffs 2026",
+    "startDate": "2026-04-18",
+    "endDate": "2026-06-20",
+    "sport": "Basketball",
+    "organizer": { "@type": "Organization", "name": "NBA" }
+  }
+  </script>
+
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES — DRIVEN BY EVENT_CONFIG
+    ============================================================ */
+    :root {
+      --primary: #e85d00;
+      --secondary: #0062ff;
+      --accent: #ffe333;
+      --bg-deep: #080c14;
+      --bg-mid: #0d1524;
+      --bg-card: rgba(255,255,255,0.045);
+      --bg-card-hover: rgba(255,255,255,0.08);
+      --border: rgba(255,255,255,0.08);
+      --border-glow: rgba(232,93,0,0.35);
+      --text-primary: #f0f4ff;
+      --text-secondary: #8a9bbf;
+      --text-muted: #4a5a78;
+      --radius: 14px;
+      --radius-sm: 8px;
+      --font-display: 'Oswald', 'Arial Narrow', sans-serif;
+      --font-body: 'DM Sans', 'Helvetica Neue', sans-serif;
+      --shadow-card: 0 4px 32px rgba(0,0,0,0.45);
+      --shadow-glow: 0 0 40px rgba(232,93,0,0.18);
+      --transition: 0.22s cubic-bezier(0.4,0,0.2,1);
+      --max-w: 1280px;
+    }
+
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; }
+    button { cursor: pointer; border: none; outline: none; font-family: inherit; }
+
+    /* Google Fonts Import */
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+    /* ============================================================
+       UTILITY CLASSES
+    ============================================================ */
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 20px; }
+    .section-label {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 10px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 28px; height: 2px;
+      background: var(--primary);
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 700;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+    .glass-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      backdrop-filter: blur(12px);
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+    .glass-card:hover {
+      background: var(--bg-card-hover);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-card);
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(232,93,0,0.4);
+    }
+    .btn-primary:hover {
+      background: #ff7a1a;
+      box-shadow: 0 6px 28px rgba(232,93,0,0.6);
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-2px);
+    }
+    .badge {
+      display: inline-flex; align-items: center;
+      padding: 4px 10px;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .badge-live { background: rgba(255,40,40,0.2); color: #ff4444; border: 1px solid rgba(255,40,40,0.3); }
+    .badge-live::before { content: '●'; margin-right: 4px; animation: pulse-dot 1s infinite; }
+    .badge-scheduled { background: rgba(0,98,255,0.15); color: #4d9eff; border: 1px solid rgba(0,98,255,0.3); }
+    .badge-final { background: rgba(255,255,255,0.08); color: var(--text-secondary); border: 1px solid var(--border); }
+    @keyframes pulse-dot { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+    .tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: rgba(232,93,0,0.15);
+      color: var(--primary);
+      border: 1px solid rgba(232,93,0,0.25);
+    }
+
+    /* ============================================================
+       SCROLL REVEAL ANIMATION
+    ============================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ============================================================
+       TOP NAV
+    ============================================================ */
+    #top-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+      background: rgba(8,12,20,0.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+      padding: 0 20px;
+      max-width: var(--max-w); margin: 0 auto;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .nav-logo span { color: var(--primary); }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a {
+      font-size: 13px; font-weight: 500;
+      color: var(--text-secondary);
+      transition: color var(--transition);
+      letter-spacing: 0.04em;
+    }
+    .nav-links a:hover { color: var(--text-primary); }
+    .nav-cta { display: none; }
+    @media(min-width: 768px) { .nav-cta { display: flex; } }
+    .hamburger {
+      display: none;
+      flex-direction: column; gap: 5px;
+      background: transparent;
+      padding: 4px;
+    }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text-primary); border-radius: 2px; }
+    @media(max-width: 767px) {
+      .hamburger { display: flex; }
+      .nav-links { display: none; }
+    }
+
+    /* ============================================================
+       HEADER LEADERBOARD AD
+    ============================================================ */
+    /* Header Leaderboard Ad — 728x90 desktop / 320x50 mobile */
+    .ad-header-leaderboard {
+      width: 100%; background: rgba(255,255,255,0.03);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      min-height: 50px; padding: 6px 0;
+      font-size: 11px; color: var(--text-muted);
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+
+    /* ============================================================
+       HERO SECTION
+    ============================================================ */
+    #hero {
+      min-height: 100vh;
+      padding-top: 60px;
+      display: flex; flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(232,93,0,0.22) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 80% at 100% 60%, rgba(0,98,255,0.14) 0%, transparent 65%),
+        linear-gradient(175deg, #0a1020 0%, #080c14 60%);
+      z-index: 0;
+    }
+    /* Animated court lines */
+    .hero-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(255,255,255,0.018) 80px, rgba(255,255,255,0.018) 81px),
+        repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(255,255,255,0.018) 80px, rgba(255,255,255,0.018) 81px);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      flex: 1;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 80px 20px 60px;
+      max-width: var(--max-w); margin: 0 auto; width: 100%;
+    }
+    .hero-eyebrow {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 20px;
+    }
+    .league-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 14px;
+      background: var(--primary);
+      border-radius: 6px;
+      font-family: var(--font-display);
+      font-size: 13px; font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .season-tag {
+      font-size: 12px; color: var(--text-secondary);
+      font-weight: 500; letter-spacing: 0.08em;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(42px, 8vw, 96px);
+      font-weight: 700;
+      line-height: 0.95;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+    }
+    .hero-title .highlight {
+      background: linear-gradient(90deg, var(--primary), #ffaa33);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-subtitle {
+      font-size: clamp(15px, 2vw, 18px);
+      color: var(--text-secondary);
+      margin-bottom: 36px;
+      max-width: 520px;
+      font-weight: 400;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 56px; }
+
+    /* Animated stats bar */
+    .hero-stats {
+      display: flex; flex-wrap: wrap; gap: 32px;
+    }
+    .hero-stat { display: flex; flex-direction: column; }
+    .hero-stat-num {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: 11px; color: var(--text-muted);
+      letter-spacing: 0.1em; text-transform: uppercase;
+      margin-top: 4px;
+    }
+    .hero-stat-num.counter { color: var(--primary); }
+
+    /* Countdown */
+    .countdown-strip {
+      position: absolute; bottom: 0; left: 0; right: 0; z-index: 2;
+      background: rgba(232,93,0,0.12);
+      border-top: 1px solid rgba(232,93,0,0.3);
+      padding: 14px 20px;
+      display: flex; align-items: center; justify-content: center;
+      gap: 24px; flex-wrap: wrap;
+    }
+    .countdown-label {
+      font-family: var(--font-display);
+      font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--primary);
+    }
+    .countdown-units { display: flex; gap: 16px; }
+    .countdown-unit { text-align: center; }
+    .countdown-num {
+      font-family: var(--font-display);
+      font-size: 28px; font-weight: 700;
+      line-height: 1;
+    }
+    .countdown-sep {
+      font-family: var(--font-display);
+      font-size: 22px; font-weight: 700;
+      color: var(--primary);
+      line-height: 1;
+      align-self: flex-start;
+      padding-top: 2px;
+    }
+    .countdown-unit-label { font-size: 9px; color: var(--text-muted); letter-spacing: 0.12em; text-transform: uppercase; }
+
+    /* ============================================================
+       FEATURED MATCHUP
+    ============================================================ */
+    #featured-matchup {
+      padding: 100px 0 80px;
+      background: linear-gradient(180deg, var(--bg-deep), var(--bg-mid));
+    }
+    .matchup-header { text-align: center; margin-bottom: 52px; }
+    .matchup-arena {
+      max-width: 900px; margin: 0 auto;
+      padding: 0 20px;
+    }
+    .matchup-card {
+      padding: 48px 36px;
+      position: relative;
+      overflow: hidden;
+    }
+    .matchup-card::before {
+      content: '';
+      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+      width: 1px; height: 100%;
+      background: linear-gradient(180deg, transparent, var(--border) 20%, var(--border) 80%, transparent);
+    }
+    .matchup-card::after {
+      content: 'VS';
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      font-family: var(--font-display);
+      font-size: 22px; font-weight: 700;
+      color: var(--primary);
+      background: var(--bg-mid);
+      padding: 10px 14px;
+      border: 1px solid var(--border-glow);
+      border-radius: 8px;
+      letter-spacing: 0.1em;
+    }
+    .matchup-teams { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+    .matchup-team { text-align: center; }
+    .team-logo-placeholder {
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display);
+      font-size: 28px; font-weight: 700;
+      margin: 0 auto 16px;
+      border: 2px solid var(--border);
+    }
+    .team-logo-placeholder.team-a { background: linear-gradient(135deg, #003d7a, #0062ff); color: #fff; }
+    .team-logo-placeholder.team-b { background: linear-gradient(135deg, #7a0000, #e85d00); color: #fff; }
+    .matchup-team-name {
+      font-family: var(--font-display);
+      font-size: 20px; font-weight: 700;
+      text-transform: uppercase;
+    }
+    .matchup-team-record { font-size: 13px; color: var(--text-secondary); margin-top: 4px; }
+    .matchup-team-seed {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 2px 10px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 50px;
+      font-size: 11px; color: var(--text-secondary);
+    }
+    .matchup-meta {
+      text-align: center; margin-top: 40px;
+      font-size: 13px; color: var(--text-secondary);
+    }
+    .matchup-meta strong { color: var(--text-primary); }
+    .matchup-probability {
+      margin: 32px auto 0; max-width: 400px;
+    }
+    .prob-label { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-secondary); margin-bottom: 8px; }
+    .prob-bar {
+      height: 6px; border-radius: 50px;
+      background: rgba(255,255,255,0.08);
+      overflow: hidden;
+    }
+    .prob-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
+      border-radius: 50px;
+      transition: width 1.5s ease;
+    }
+    .matchup-actions { display: flex; justify-content: center; gap: 12px; margin-top: 36px; flex-wrap: wrap; }
+
+    /* ============================================================
+       TODAY'S GAMES
+    ============================================================ */
+    #todays-games {
+      padding: 80px 0;
+      background: var(--bg-mid);
+    }
+    .games-header {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      margin-bottom: 36px; flex-wrap: wrap; gap: 16px;
+    }
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+    }
+    .game-card { padding: 24px; }
+    .game-card-top {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 20px;
+    }
+    .game-series { font-size: 11px; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase; }
+    .game-teams { display: flex; flex-direction: column; gap: 12px; }
+    .game-team-row {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .game-team-info { display: flex; align-items: center; gap: 12px; }
+    .game-team-logo {
+      width: 36px; height: 36px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 12px; font-weight: 700;
+      background: rgba(255,255,255,0.08); border: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .game-team-name { font-weight: 600; font-size: 14px; }
+    .game-team-seed { font-size: 10px; color: var(--text-muted); }
+    .game-score {
+      font-family: var(--font-display);
+      font-size: 22px; font-weight: 700;
+    }
+    .game-score.winner { color: var(--primary); }
+    .game-score.scheduled { color: var(--text-secondary); font-size: 13px; font-family: var(--font-body); }
+    .game-divider { height: 1px; background: var(--border); margin: 6px 0; }
+    .game-time {
+      margin-top: 16px; font-size: 12px; color: var(--text-secondary);
+      display: flex; align-items: center; gap: 6px;
+    }
+    .win-prob-mini { margin-top: 14px; }
+    .win-prob-mini-bar {
+      height: 3px; border-radius: 50px; background: rgba(255,255,255,0.07); overflow: hidden;
+    }
+    .win-prob-mini-fill { height: 100%; border-radius: 50px; background: linear-gradient(90deg, var(--secondary), var(--primary)); }
+    .win-prob-labels { display: flex; justify-content: space-between; font-size: 10px; color: var(--text-muted); margin-top: 4px; }
+
+    /* ============================================================
+       STANDINGS
+    ============================================================ */
+    #standings { padding: 80px 0; background: var(--bg-deep); }
+    .standings-tabs {
+      display: flex; gap: 4px; margin-bottom: 28px;
+      background: rgba(255,255,255,0.04); border-radius: 10px; padding: 4px;
+      max-width: 360px;
+    }
+    .standings-tab {
+      flex: 1; padding: 10px 16px;
+      background: transparent;
+      color: var(--text-secondary);
+      font-family: var(--font-display);
+      font-size: 13px; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      border-radius: 8px;
+      transition: all var(--transition);
+    }
+    .standings-tab.active {
+      background: var(--primary); color: #fff;
+    }
+    .standings-table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--border); }
+    table.standings-table {
+      width: 100%; border-collapse: collapse; min-width: 480px;
+    }
+    .standings-table thead th {
+      padding: 14px 16px;
+      font-family: var(--font-display);
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--text-muted);
+      background: rgba(255,255,255,0.03);
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+    }
+    .standings-table thead th:not(:first-child) { text-align: center; }
+    .standings-table tbody tr {
+      border-bottom: 1px solid rgba(255,255,255,0.035);
+      transition: background var(--transition);
+    }
+    .standings-table tbody tr:last-child { border-bottom: none; }
+    .standings-table tbody tr:hover { background: rgba(255,255,255,0.04); }
+    .standings-table td {
+      padding: 13px 16px; font-size: 13px; text-align: center;
+    }
+    .standings-table td:first-child { text-align: left; }
+    .standings-rank {
+      width: 28px; height: 28px; border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 12px; font-weight: 700;
+      background: rgba(255,255,255,0.06); color: var(--text-secondary);
+      margin-right: 10px;
+    }
+    .standings-rank.top3 { background: var(--primary); color: #fff; }
+    .standings-team-name { font-weight: 600; }
+    .win-pct { color: var(--primary); font-weight: 600; }
+
+    /* ============================================================
+       PLAYER SPOTLIGHT
+    ============================================================ */
+    #player-spotlight { padding: 80px 0; background: var(--bg-mid); }
+    .players-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .player-card { padding: 28px; }
+    .player-avatar {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: linear-gradient(135deg, rgba(232,93,0,0.3), rgba(0,98,255,0.3));
+      border: 2px solid var(--border-glow);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 24px; font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .player-name { font-family: var(--font-display); font-size: 18px; font-weight: 700; text-transform: uppercase; }
+    .player-team { font-size: 12px; color: var(--text-secondary); margin-bottom: 16px; }
+    .player-stats { display: flex; gap: 20px; margin-bottom: 16px; }
+    .player-stat { text-align: center; }
+    .player-stat-val {
+      font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--primary);
+    }
+    .player-stat-lbl { font-size: 10px; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase; }
+    .achievement-badges { display: flex; flex-wrap: wrap; gap: 6px; }
+    .achievement-badge {
+      padding: 3px 10px; border-radius: 50px; font-size: 10px; font-weight: 600;
+      background: rgba(255,227,51,0.1); color: var(--accent);
+      border: 1px solid rgba(255,227,51,0.25);
+      letter-spacing: 0.05em;
+    }
+
+    /* ============================================================
+       TRENDING NEWS
+    ============================================================ */
+    #trending-news { padding: 80px 0; background: var(--bg-deep); }
+    .news-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media(max-width: 900px) { .news-layout { grid-template-columns: 1fr; } }
+    .news-featured { grid-row: span 2; }
+    .news-card {
+      padding: 28px;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .news-featured .news-card {
+      height: 100%;
+    }
+    .news-thumb {
+      width: 100%; aspect-ratio: 16/9;
+      background: linear-gradient(135deg, rgba(232,93,0,0.15), rgba(0,98,255,0.15));
+      border-radius: 10px; border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-muted); font-size: 13px; letter-spacing: 0.06em;
+    }
+    .news-category { /* tag */ }
+    .news-headline {
+      font-family: var(--font-display);
+      font-size: clamp(16px, 2.5vw, 22px);
+      font-weight: 700;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+    .news-excerpt { font-size: 13px; color: var(--text-secondary); flex: 1; }
+    .news-meta { font-size: 11px; color: var(--text-muted); letter-spacing: 0.04em; }
+    .news-read-more {
+      font-family: var(--font-display);
+      font-size: 12px; font-weight: 600;
+      color: var(--primary);
+      letter-spacing: 0.08em; text-transform: uppercase;
+      display: flex; align-items: center; gap: 6px;
+      transition: gap var(--transition);
+    }
+    .news-read-more:hover { gap: 12px; }
+
+    /* In-Content Banner Ad */
+    /* In Content Banner Ad — 728x90 or 300x250 */
+    .ad-incontent {
+      margin: 40px 0;
+      min-height: 90px;
+      background: rgba(255,255,255,0.025);
+      border: 1px dashed rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase;
+    }
+
+    /* ============================================================
+       HIGHLIGHTS / VIDEO
+    ============================================================ */
+    #highlights { padding: 80px 0; background: var(--bg-mid); }
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .highlight-card { padding: 0; overflow: hidden; }
+    .highlight-thumb {
+      width: 100%; aspect-ratio: 16/9;
+      background: linear-gradient(135deg, rgba(232,93,0,0.2), rgba(0,98,255,0.2));
+      display: flex; align-items: center; justify-content: center;
+      position: relative; cursor: pointer;
+    }
+    .play-btn {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: rgba(232,93,0,0.9);
+      display: flex; align-items: center; justify-content: center;
+      transition: all var(--transition);
+    }
+    .highlight-thumb:hover .play-btn { transform: scale(1.1); background: var(--primary); }
+    .play-icon { width: 0; height: 0; border-style: solid; border-width: 10px 0 10px 18px; border-color: transparent transparent transparent #fff; margin-left: 3px; }
+    .highlight-info { padding: 20px; }
+    .highlight-title { font-family: var(--font-display); font-size: 15px; font-weight: 700; text-transform: uppercase; margin-bottom: 6px; }
+    .highlight-meta { font-size: 12px; color: var(--text-secondary); }
+
+    /* ============================================================
+       FAN FAVORITES + POLL
+    ============================================================ */
+    #fan-favorites { padding: 80px 0; background: var(--bg-deep); }
+    .fan-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    @media(max-width: 700px) { .fan-grid { grid-template-columns: 1fr; } }
+    .poll-card { padding: 32px; }
+    .poll-title { font-family: var(--font-display); font-size: 18px; font-weight: 700; text-transform: uppercase; margin-bottom: 24px; }
+    .poll-option { margin-bottom: 16px; }
+    .poll-option-label { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px; }
+    .poll-bar-bg { height: 8px; background: rgba(255,255,255,0.07); border-radius: 50px; overflow: hidden; }
+    .poll-bar-fill { height: 100%; border-radius: 50px; transition: width 1.2s ease; }
+    .poll-pct { font-family: var(--font-display); font-weight: 700; color: var(--primary); }
+    .poll-vote-btn {
+      width: 100%; margin-top: 20px;
+      padding: 12px; border-radius: 50px;
+      background: var(--primary); color: #fff;
+      font-family: var(--font-display); font-size: 13px; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      transition: all var(--transition);
+    }
+    .poll-vote-btn:hover { background: #ff7a1a; }
+    .popular-teams-card { padding: 32px; }
+    .popular-teams-title { font-family: var(--font-display); font-size: 18px; font-weight: 700; text-transform: uppercase; margin-bottom: 24px; }
+    .popular-team-item {
+      display: flex; align-items: center; gap: 14px;
+      padding: 12px 0; border-bottom: 1px solid var(--border);
+    }
+    .popular-team-item:last-child { border-bottom: none; }
+    .popular-team-rank {
+      font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--text-muted); width: 28px;
+    }
+    .popular-team-badge {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(255,255,255,0.08); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 12px; font-weight: 700;
+    }
+    .popular-team-name { flex: 1; font-weight: 600; font-size: 14px; }
+    .popular-team-fans { font-size: 12px; color: var(--text-secondary); }
+
+    /* Native Content Ad */
+    /* Native Content Ad — seamlessly styled */
+    .ad-native {
+      padding: 24px; border-radius: var(--radius);
+      background: rgba(255,255,255,0.025);
+      border: 1px dashed rgba(255,255,255,0.06);
+      display: flex; align-items: center; gap: 16px;
+      margin-top: 24px;
+    }
+    .ad-native-label { font-size: 9px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 4px; }
+
+    /* ============================================================
+       NEWSLETTER
+    ============================================================ */
+    #newsletter { padding: 100px 0; background: linear-gradient(135deg, rgba(232,93,0,0.12), rgba(0,98,255,0.08)); position: relative; overflow: hidden; }
+    #newsletter::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(232,93,0,0.08) 0%, transparent 70%);
+    }
+    .newsletter-inner { position: relative; z-index: 1; text-align: center; max-width: 620px; margin: 0 auto; padding: 0 20px; }
+    .newsletter-title { font-family: var(--font-display); font-size: clamp(28px, 5vw, 52px); font-weight: 700; text-transform: uppercase; margin-bottom: 16px; line-height: 1.05; }
+    .newsletter-desc { font-size: 15px; color: var(--text-secondary); margin-bottom: 36px; }
+    .newsletter-form { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+    .newsletter-input {
+      flex: 1; min-width: 240px;
+      padding: 16px 22px; border-radius: 50px;
+      background: rgba(255,255,255,0.07); border: 1px solid var(--border);
+      color: var(--text-primary); font-family: var(--font-body); font-size: 14px;
+      outline: none; transition: border-color var(--transition);
+    }
+    .newsletter-input::placeholder { color: var(--text-muted); }
+    .newsletter-input:focus { border-color: var(--primary); }
+    .newsletter-trust { margin-top: 16px; font-size: 12px; color: var(--text-muted); }
+
+    /* ============================================================
+       SOCIAL PROOF
+    ============================================================ */
+    #social-proof { padding: 60px 0; background: var(--bg-mid); }
+    .proof-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+    .proof-card {
+      padding: 28px 24px; text-align: center;
+      border-top: 2px solid var(--primary);
+    }
+    .proof-num {
+      font-family: var(--font-display); font-size: 36px; font-weight: 700; color: var(--primary);
+      line-height: 1;
+    }
+    .proof-label { font-size: 12px; color: var(--text-secondary); margin-top: 6px; letter-spacing: 0.05em; }
+    .trending-ticker {
+      background: rgba(232,93,0,0.1); border: 1px solid rgba(232,93,0,0.25);
+      border-radius: 50px; padding: 10px 20px;
+      display: flex; align-items: center; gap: 12px;
+      margin-top: 36px; overflow: hidden;
+    }
+    .ticker-label { font-family: var(--font-display); font-size: 11px; font-weight: 700; color: var(--primary); white-space: nowrap; letter-spacing: 0.1em; text-transform: uppercase; }
+    .ticker-track { flex: 1; overflow: hidden; }
+    .ticker-text { font-size: 13px; color: var(--text-secondary); animation: ticker-scroll 18s linear infinite; white-space: nowrap; display: inline-block; }
+    @keyframes ticker-scroll { 0%{transform:translateX(100%)} 100%{transform:translateX(-100%)} }
+
+    /* Mid Article Ad */
+    /* Mid Article Ad — 300x250 / responsive */
+    .ad-mid-article {
+      margin: 48px auto; max-width: 600px;
+      min-height: 100px;
+      background: rgba(255,255,255,0.025);
+      border: 1px dashed rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase;
+    }
+
+    /* ============================================================
+       FAQ ACCORDION
+    ============================================================ */
+    #faq { padding: 80px 0; background: var(--bg-deep); }
+    .faq-list { max-width: 760px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question {
+      width: 100%; text-align: left;
+      padding: 22px 0;
+      background: transparent;
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 15px; font-weight: 600; color: var(--text-primary);
+      transition: color var(--transition);
+    }
+    .faq-question:hover { color: var(--primary); }
+    .faq-icon {
+      width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+      background: rgba(255,255,255,0.06); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; line-height: 1; transition: all var(--transition);
+    }
+    .faq-item.open .faq-icon { background: var(--primary); border-color: var(--primary); transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; }
+    .faq-answer-inner { padding: 0 0 22px; font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+    .faq-item.open .faq-answer { max-height: 300px; }
+
+    /* ============================================================
+       FINAL CTA
+    ============================================================ */
+    #final-cta {
+      padding: 120px 0;
+      text-align: center;
+      background: linear-gradient(180deg, var(--bg-mid) 0%, var(--bg-deep) 100%);
+      position: relative; overflow: hidden;
+    }
+    #final-cta::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(232,93,0,0.14) 0%, transparent 70%);
+    }
+    .final-cta-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; padding: 0 20px; }
+    .final-cta-title { font-family: var(--font-display); font-size: clamp(32px, 6vw, 64px); font-weight: 700; text-transform: uppercase; line-height: 1; margin-bottom: 20px; }
+    .final-cta-sub { font-size: 16px; color: var(--text-secondary); margin-bottom: 40px; }
+    .final-cta-actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+
+    /* Footer Banner Ad */
+    /* Footer Banner Ad — 728x90 */
+    .ad-footer-banner {
+      margin-bottom: 0;
+      min-height: 60px;
+      background: rgba(255,255,255,0.025);
+      border-top: 1px solid rgba(255,255,255,0.04);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase;
+    }
+
+    /* Sticky Mobile Footer Ad */
+    /* Sticky Mobile Footer Ad — fixed 320x50 */
+    .ad-sticky-mobile {
+      display: none;
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 888;
+      height: 50px; background: rgba(8,12,20,0.97);
+      border-top: 1px solid var(--border);
+      align-items: center; justify-content: center;
+      font-size: 11px; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    @media(max-width: 767px) { .ad-sticky-mobile { display: flex; } }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    #footer { padding: 60px 0 40px; background: var(--bg-deep); border-top: 1px solid var(--border); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    @media(max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+    @media(max-width: 500px) { .footer-grid { grid-template-columns: 1fr; } }
+    .footer-brand-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.7; margin-top: 12px; }
+    .footer-col-title { font-family: var(--font-display); font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-primary); margin-bottom: 16px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 13px; color: var(--text-secondary); transition: color var(--transition); }
+    .footer-links a:hover { color: var(--primary); }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: 12px; color: var(--text-muted); }
+    .footer-disclaimer { font-size: 11px; color: var(--text-muted); max-width: 580px; line-height: 1.6; }
+    .social-links-row { display: flex; gap: 10px; margin-top: 16px; }
+    .social-link {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: rgba(255,255,255,0.06); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 12px; font-weight: 700;
+      transition: all var(--transition); color: var(--text-secondary);
+    }
+    .social-link:hover { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+    /* ============================================================
+       SIDEBAR AD DESKTOP
+    ============================================================ */
+    /* Sidebar Ad Desktop — 300x600 or 300x250 (inject via JS if layout allows) */
+    /* .ad-sidebar { width: 300px; min-height: 250px; ... } */
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media(max-width: 640px) {
+      .matchup-teams { gap: 30px; }
+      .matchup-card::after { font-size: 16px; padding: 8px 10px; }
+      .news-layout { grid-template-columns: 1fr; }
+      .news-featured { grid-row: span 1; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ========================================================
+       STICKY MOBILE FOOTER AD PLACEHOLDER
+  ======================================================== -->
+  <div class="ad-sticky-mobile" aria-label="Advertisement" role="complementary">
+    [ Advertisement — 320×50 ]
+  </div>
+
+  <!-- ========================================================
+       HEADER LEADERBOARD AD
+  ======================================================== -->
+  <div class="ad-header-leaderboard" aria-label="Advertisement" role="complementary">
+    [ Leaderboard Advertisement — 728×90 ]
+  </div>
+
+  <!-- ========================================================
+       TOP NAVIGATION
+  ======================================================== -->
+  <nav id="top-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo"><span id="nav-logo-text">SPORT<span>PULSE</span></span></a>
+      <div class="nav-links" id="nav-links">
+        <a href="#todays-games">Games</a>
+        <a href="#standings">Standings</a>
+        <a href="#player-spotlight">Players</a>
+        <a href="#trending-news">News</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a href="#newsletter" class="btn btn-primary nav-cta" style="padding:10px 20px;font-size:12px;">Get Updates</a>
+      <button class="hamburger" aria-label="Open menu" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========================================================
+       HERO SECTION
+  ======================================================== -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal">
+        <div class="league-badge" id="hero-league-badge">🏀 NBA</div>
+        <span class="season-tag">2026 PLAYOFFS — CONFERENCE FINALS</span>
+        <div class="badge badge-live">LIVE NOW</div>
+      </div>
+      <h1 class="hero-title reveal reveal-delay-1">
+        <span id="hero-title-line1">NBA</span><br>
+        <span class="highlight" id="hero-title-line2">PLAYOFFS</span>
+      </h1>
+      <p class="hero-subtitle reveal reveal-delay-2" id="hero-subtitle">
+        Conference Finals are underway. OKC vs San Antonio and New York vs Cleveland — every possession counts.
+      </p>
+      <div class="hero-actions reveal reveal-delay-3">
+        <a href="#todays-games" class="btn btn-primary">📅 View All Games</a>
+        <a href="#standings" class="btn btn-secondary">See Standings</a>
+      </div>
+      <div class="hero-stats reveal reveal-delay-4">
+        <div class="hero-stat">
+          <div class="hero-stat-num counter" data-target="4">0</div>
+          <div class="hero-stat-label">Series Active</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num counter" data-target="30">0</div>
+          <div class="hero-stat-label">Teams This Season</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num counter" data-target="64">0</div>
+          <div class="hero-stat-label">OKC Season Wins</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num counter" data-target="2026">0</div>
+          <div class="hero-stat-label">Season</div>
+        </div>
+      </div>
+    </div>
+    <div class="countdown-strip" id="countdown-strip">
+      <div class="countdown-label">🏀 Next Game Starts In</div>
+      <div class="countdown-units">
+        <div class="countdown-unit">
+          <div class="countdown-num" id="cd-hours">00</div>
+          <div class="countdown-unit-label">Hrs</div>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit">
+          <div class="countdown-num" id="cd-mins">00</div>
+          <div class="countdown-unit-label">Min</div>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit">
+          <div class="countdown-num" id="cd-secs">00</div>
+          <div class="countdown-unit-label">Sec</div>
+        </div>
+      </div>
+      <span id="countdown-game-label" style="font-size:12px;color:var(--text-secondary);"></span>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FEATURED MATCHUP
+  ======================================================== -->
+  <section id="featured-matchup" aria-labelledby="matchup-heading">
+    <div class="container">
+      <div class="matchup-header">
+        <div class="section-label">🔥 Featured Series</div>
+        <h2 class="section-title" id="matchup-heading">Western Conference Finals</h2>
+        <p style="color:var(--text-secondary);margin-top:8px;font-size:14px;">Series tied 1-1 — Game 3 Saturday, May 23</p>
+      </div>
+      <div class="matchup-arena">
+        <div class="glass-card matchup-card reveal">
+          <div class="matchup-teams">
+            <div class="matchup-team">
+              <div class="team-logo-placeholder team-b">OKC</div>
+              <div class="matchup-team-name">Oklahoma City Thunder</div>
+              <div class="matchup-team-record">64–18 Regular Season</div>
+              <div class="matchup-team-seed">West #1 Seed</div>
+            </div>
+            <div class="matchup-team">
+              <div class="team-logo-placeholder team-a">SAS</div>
+              <div class="matchup-team-name">San Antonio Spurs</div>
+              <div class="matchup-team-record">62–20 Regular Season</div>
+              <div class="matchup-team-seed">West #2 Seed</div>
+            </div>
+          </div>
+          <div class="matchup-probability">
+            <div class="prob-label"><span>OKC Win Probability</span><span>47% · 53%</span></div>
+            <div class="prob-bar"><div class="prob-fill" style="width:47%"></div></div>
+          </div>
+          <div class="matchup-meta">
+            <strong>Game 3</strong> · Saturday, May 23 · Frost Bank Center, San Antonio · <strong>8:30 PM ET</strong>
+          </div>
+          <div class="matchup-actions">
+            <a href="#todays-games" class="btn btn-primary">See All Games</a>
+            <a href="#standings" class="btn btn-secondary">Full Standings</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       TODAY'S GAMES
+  ======================================================== -->
+  <section id="todays-games" aria-labelledby="games-heading">
+    <div class="container">
+      <div class="games-header">
+        <div>
+          <div class="section-label">📅 Schedule</div>
+          <h2 class="section-title" id="games-heading">Upcoming Games</h2>
+        </div>
+        <a href="#standings" class="btn btn-secondary" style="font-size:12px;padding:10px 20px;">Full Schedule</a>
+      </div>
+      <div class="games-grid" id="games-grid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- IN-CONTENT BANNER AD -->
+  <div class="container">
+    <div class="ad-incontent" aria-label="Advertisement" role="complementary">
+      [ In-Content Banner — 728×90 / 300×250 ]
+    </div>
+  </div>
+
+  <!-- ========================================================
+       STANDINGS
+  ======================================================== -->
+  <section id="standings" aria-labelledby="standings-heading">
+    <div class="container">
+      <div style="margin-bottom:36px;">
+        <div class="section-label">📊 League</div>
+        <h2 class="section-title" id="standings-heading">2026 Standings</h2>
+      </div>
+      <div class="standings-tabs">
+        <button class="standings-tab active" onclick="switchConf('east',this)">Eastern</button>
+        <button class="standings-tab" onclick="switchConf('west',this)">Western</button>
+      </div>
+      <div class="standings-table-wrap reveal">
+        <table class="standings-table" id="standings-table" role="table" aria-label="NBA Standings">
+          <thead>
+            <tr>
+              <th scope="col">Team</th>
+              <th scope="col">W</th>
+              <th scope="col">L</th>
+              <th scope="col">Win%</th>
+            </tr>
+          </thead>
+          <tbody id="standings-body">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       PLAYER SPOTLIGHT
+  ======================================================== -->
+  <section id="player-spotlight" aria-labelledby="players-heading">
+    <div class="container">
+      <div style="margin-bottom:40px;">
+        <div class="section-label">⭐ Athletes</div>
+        <h2 class="section-title" id="players-heading">Player Spotlight</h2>
+      </div>
+      <div class="players-grid" id="players-grid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       TRENDING SPORTS NEWS
+  ======================================================== -->
+  <section id="trending-news" aria-labelledby="news-heading">
+    <div class="container">
+      <div style="margin-bottom:40px;">
+        <div class="section-label">📰 Latest</div>
+        <h2 class="section-title" id="news-heading">Trending Stories</h2>
+      </div>
+      <div class="news-layout" id="news-grid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- MID ARTICLE AD -->
+  <div class="ad-mid-article" aria-label="Advertisement" role="complementary">
+    [ Mid-Article Ad — 300×250 / 600×100 ]
+  </div>
+
+  <!-- ========================================================
+       HIGHLIGHTS
+  ======================================================== -->
+  <section id="highlights" aria-labelledby="highlights-heading">
+    <div class="container">
+      <div style="margin-bottom:40px;">
+        <div class="section-label">🎬 Video</div>
+        <h2 class="section-title" id="highlights-heading">Game Highlights</h2>
+      </div>
+      <div class="highlights-grid" id="highlights-grid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FAN FAVORITES
+  ======================================================== -->
+  <section id="fan-favorites" aria-labelledby="fans-heading">
+    <div class="container">
+      <div style="margin-bottom:40px;">
+        <div class="section-label">🏆 Community</div>
+        <h2 class="section-title" id="fans-heading">Fan Favorites</h2>
+      </div>
+      <div class="fan-grid">
+        <div class="glass-card poll-card reveal">
+          <div class="poll-title">Who Wins The NBA Title?</div>
+          <div id="poll-options"><!-- injected --></div>
+          <button class="poll-vote-btn" onclick="castVote()">Submit Vote</button>
+        </div>
+        <div class="glass-card popular-teams-card reveal reveal-delay-2">
+          <div class="popular-teams-title">Most Popular Teams</div>
+          <div id="popular-teams"><!-- injected --></div>
+        </div>
+      </div>
+      <!-- NATIVE CONTENT AD -->
+      <div class="ad-native" aria-label="Advertisement" role="complementary">
+        <div>
+          <span class="ad-native-label">Sponsored</span>
+          <div style="font-size:14px;color:var(--text-secondary);">[ Native Content Ad Placement ]</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       NEWSLETTER
+  ======================================================== -->
+  <section id="newsletter" aria-labelledby="newsletter-heading">
+    <div class="newsletter-inner">
+      <div class="section-label" style="justify-content:center;">📬 Stay Ahead</div>
+      <h2 class="newsletter-title" id="newsletter-heading">Never Miss a<br><span style="color:var(--primary)">Big Moment</span></h2>
+      <p class="newsletter-desc">
+        Playoff scores, breaking trades, injury reports and highlight reels — delivered straight to your inbox.
+      </p>
+      <div class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="your@email.com" aria-label="Email address" id="nl-email" />
+        <button class="btn btn-primary" onclick="subscribeEmail()">Get Alerts 🏀</button>
+      </div>
+      <div class="newsletter-trust">🔒 No spam. Unsubscribe anytime. 500,000+ fans already signed up.</div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SOCIAL PROOF
+  ======================================================== -->
+  <section id="social-proof" aria-label="Community metrics">
+    <div class="container">
+      <div class="proof-grid" id="proof-grid">
+        <!-- injected -->
+      </div>
+      <div class="trending-ticker">
+        <div class="ticker-label">🔥 Trending</div>
+        <div class="ticker-track">
+          <div class="ticker-text" id="ticker-text"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FAQ ACCORDION
+  ======================================================== -->
+  <section id="faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:52px;">
+        <div class="section-label" style="justify-content:center;">❓ FAQ</div>
+        <h2 class="section-title" id="faq-heading">Common Questions</h2>
+      </div>
+      <div class="faq-list" id="faq-list"><!-- injected --></div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FINAL CTA
+  ======================================================== -->
+  <section id="final-cta" aria-label="Call to action">
+    <div class="final-cta-inner">
+      <div class="section-label" style="justify-content:center;">🚀 Don't Miss Out</div>
+      <h2 class="final-cta-title reveal">
+        Who Takes The <span style="color:var(--primary)">Crown?</span>
+      </h2>
+      <p class="final-cta-sub reveal reveal-delay-1">
+        The 2026 NBA Finals start June 4. Follow every game, every shot, every story.
+      </p>
+      <div class="final-cta-actions reveal reveal-delay-2">
+        <a href="#newsletter" class="btn btn-primary">Get Game Alerts</a>
+        <a href="#todays-games" class="btn btn-secondary">View Schedule</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER BANNER AD -->
+  <div class="ad-footer-banner" aria-label="Advertisement" role="complementary">
+    [ Footer Banner — 728×90 ]
+  </div>
+
+  <!-- ========================================================
+       FOOTER
+  ======================================================== -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="nav-logo">SPORT<span style="color:var(--primary)">PULSE</span></div>
+          <p class="footer-brand-desc">Your home for live NBA scores, standings, highlights, and breaking basketball news. Built for fans, by fans.</p>
+          <div class="social-links-row">
+            <a href="#" class="social-link" aria-label="Twitter">X</a>
+            <a href="#" class="social-link" aria-label="Instagram">IG</a>
+            <a href="#" class="social-link" aria-label="YouTube">YT</a>
+            <a href="#" class="social-link" aria-label="TikTok">TK</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Coverage</div>
+          <ul class="footer-links">
+            <li><a href="#todays-games">Game Scores</a></li>
+            <li><a href="#standings">Standings</a></li>
+            <li><a href="#player-spotlight">Players</a></li>
+            <li><a href="#highlights">Highlights</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Leagues</div>
+          <ul class="footer-links">
+            <li><a href="#">NBA</a></li>
+            <li><a href="#">WNBA</a></li>
+            <li><a href="#">NCAA Basketball</a></li>
+            <li><a href="#">NFL</a></li>
+            <li><a href="#">MLB</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Advertise</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2026 SportPulse. All rights reserved.</div>
+        <div class="footer-disclaimer">
+          Scores and data updated in real-time. This site is for informational and entertainment purposes only. All team names, logos, and statistics are property of their respective owners.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT — MASTER CONFIG + ALL LOGIC
+  ============================================================ -->
+  <script>
+    /* ============================================================
+       MASTER EVENT CONFIGURATION
+       Change only this object to deploy for any sport/league.
+    ============================================================ */
+    const EVENT_CONFIG = {
+      league: "NBA",
+      eventTitle: "NBA Playoffs",
+      subtitle: "Conference Finals — 2026",
+      heroImage: "",
+      backgroundImage: "",
+      primaryColor: "#e85d00",
+      secondaryColor: "#0062ff",
+
+      // FEATURED MATCHUP — auto-populated from live data below
+      featuredMatchup: "OKC Thunder vs San Antonio Spurs",
+      matchupDate: "Saturday, May 23, 2026 — 8:30 PM ET",
+      countdownDate: "2026-05-23T20:30:00",  // Next scheduled game
+
+      affiliateButtonUrl: "#newsletter",
+      newsletterEnabled: true,
+      adEnabled: true,
+
+      // Teams from live data (abbreviated)
+      teams: [
+        { abbr:"OKC", name:"Oklahoma City Thunder", conf:"West", seed:1, w:64, l:18 },
+        { abbr:"SAS", name:"San Antonio Spurs",     conf:"West", seed:2, w:62, l:20 },
+        { abbr:"NYK", name:"New York Knicks",       conf:"East", seed:3, w:53, l:29 },
+        { abbr:"CLE", name:"Cleveland Cavaliers",   conf:"East", seed:4, w:52, l:30 },
+      ],
+
+      // Upcoming scheduled games from live data
+      upcomingGames: [
+        { away:"CLE", home:"NYK", awayFull:"Cleveland Cavaliers", homeFull:"New York Knicks", series:"East Finals – Game 2", date:"Fri May 22", time:"8:00 PM ET", probHome:64.9, probAway:35.1 },
+        { away:"OKC", home:"SAS", awayFull:"OKC Thunder", homeFull:"San Antonio Spurs", series:"West Finals – Game 3", date:"Sat May 23", time:"8:30 PM ET", probHome:53.1, probAway:46.9 },
+        { away:"NYK", home:"CLE", awayFull:"New York Knicks", homeFull:"Cleveland Cavaliers", series:"East Finals – Game 3", date:"Sun May 24", time:"8:00 PM ET", probHome:null, probAway:null },
+        { away:"OKC", home:"SAS", awayFull:"OKC Thunder", homeFull:"San Antonio Spurs", series:"West Finals – Game 4", date:"Mon May 25", time:"8:00 PM ET", probHome:53.1, probAway:46.9 },
+      ],
+
+      // Standings (pre-populated from API)
+      standings: {
+        east: [
+          { rank:1, name:"Boston Celtics",     w:56, l:26, pct:.683 },
+          { rank:2, name:"New York Knicks",    w:53, l:29, pct:.646 },
+          { rank:3, name:"Detroit Pistons",    w:60, l:22, pct:.732 },
+          { rank:4, name:"Cleveland Cavaliers",w:52, l:30, pct:.634 },
+          { rank:5, name:"Philadelphia 76ers", w:45, l:37, pct:.549 },
+          { rank:6, name:"Toronto Raptors",    w:46, l:36, pct:.561 },
+          { rank:7, name:"Atlanta Hawks",      w:46, l:36, pct:.561 },
+          { rank:8, name:"Orlando Magic",      w:45, l:37, pct:.549 },
+        ],
+        west: [
+          { rank:1, name:"Oklahoma City Thunder", w:64, l:18, pct:.780 },
+          { rank:2, name:"San Antonio Spurs",     w:62, l:20, pct:.756 },
+          { rank:3, name:"Denver Nuggets",        w:54, l:28, pct:.659 },
+          { rank:4, name:"Los Angeles Lakers",    w:53, l:29, pct:.646 },
+          { rank:5, name:"Houston Rockets",       w:52, l:30, pct:.634 },
+          { rank:6, name:"Minnesota Timberwolves",w:49, l:33, pct:.598 },
+          { rank:7, name:"Phoenix Suns",          w:45, l:37, pct:.549 },
+          { rank:8, name:"Portland Trail Blazers",w:42, l:40, pct:.512 },
+        ]
+      },
+
+      // Player spotlights (fictional but realistic)
+      playerHighlights: [
+        { name:"Shai Gilgeous-Alexander", initials:"SG", team:"OKC Thunder", pts:32.4, ast:6.1, reb:4.8, badges:["MVP Candidate","Scoring Leader","All-Star"] },
+        { name:"Victor Wembanyama", initials:"VW", team:"San Antonio Spurs", pts:26.8, ast:3.6, reb:11.2, badges:["Defensive Player","Block Leader","All-NBA"] },
+        { name:"Jalen Brunson", initials:"JB", team:"New York Knicks", pts:28.3, ast:7.4, reb:3.5, badges:["Clutch Player","All-Star","Fan Favorite"] },
+        { name:"Donovan Mitchell", initials:"DM", team:"Cleveland Cavaliers", pts:27.1, ast:5.2, reb:4.0, badges:["All-Star","Scorer","Game Winner"] },
+      ],
+
+      // Trending stories
+      trendingStories: [
+        { category:"Breaking", headline:"OKC Wins Game 2 in Dominant Fashion to Even Western Conference Finals", excerpt:"Shai Gilgeous-Alexander dropped 38 points as the Thunder outscored San Antonio by 9 in Game 2, tying the series at 1-1.", date:"May 21, 2026", featured:true },
+        { category:"Analysis", headline:"Can the Spurs' Wembanyama Disrupt OKC's Offense in Game 3?", excerpt:"Victor Wembanyama's rim protection will be pivotal when the series shifts to San Antonio.", date:"May 21, 2026", featured:false },
+        { category:"Preview", headline:"East Finals: Knicks Hold Commanding 1-0 Lead Over Cavaliers", excerpt:"Madison Square Garden erupted as the Knicks won Game 1 115-104, putting Cleveland in early trouble.", date:"May 20, 2026", featured:false },
+        { category:"Stats", headline:"SGA on Pace for Historic Playoff Scoring Run", excerpt:"Through two rounds, Gilgeous-Alexander is averaging 34.2 ppg, fourth-best in playoff history at this stage.", date:"May 19, 2026", featured:false },
+      ],
+
+      // Video highlights
+      highlights: [
+        { title:"SGA DROPS 38 — Game 2 Full Highlights", team:"OKC vs SAS", duration:"4:22" },
+        { title:"Jalen Brunson's 35-Point Performance — Game 1 East Finals", team:"NYK vs CLE", duration:"3:58" },
+        { title:"Wembanyama's 12-Block Game 1 Masterclass", team:"SAS vs OKC", duration:"3:11" },
+        { title:"Top 10 Plays — Conference Finals Week 1", team:"NBA Playoffs", duration:"5:44" },
+        { title:"CLE Forces 7 Game vs DET — Best Moments", team:"CLE vs DET", duration:"4:07" },
+        { title:"Knicks' MSG Crowd Goes Wild — Season's Best Moments", team:"NYK Playoffs", duration:"3:33" },
+      ],
+
+      // Poll options
+      pollOptions: [
+        { label:"OKC Thunder", pct:38, color:"#e85d00" },
+        { label:"San Antonio Spurs", pct:26, color:"#9bddff" },
+        { label:"New York Knicks", pct:24, color:"#003087" },
+        { label:"Cleveland Cavaliers", pct:12, color:"#860038" },
+      ],
+
+      // Popular teams for fan section
+      popularTeams: [
+        { abbr:"OKC", name:"Oklahoma City Thunder", fans:"2.4M fans" },
+        { abbr:"NYK", name:"New York Knicks", fans:"3.1M fans" },
+        { abbr:"SAS", name:"San Antonio Spurs", fans:"1.9M fans" },
+        { abbr:"CLE", name:"Cleveland Cavaliers", fans:"1.6M fans" },
+        { abbr:"LAL", name:"Los Angeles Lakers", fans:"5.2M fans" },
+      ],
+
+      // Social proof stats
+      proofStats: [
+        { num:"2.4M", label:"Monthly Visitors" },
+        { num:"847K", label:"Newsletter Subscribers" },
+        { num:"96%", label:"Score Accuracy" },
+        { num:"12K+", label:"Live Updates Daily" },
+      ],
+
+      // Ticker items
+      tickerItems: [
+        "OKC Thunder lead series 1-1 after Game 2 victory",
+        "New York Knicks win Game 1 of East Finals vs Cleveland",
+        "Shai Gilgeous-Alexander averages 38 PPG this round",
+        "NBA Finals begin June 4 — TBD vs TBD",
+        "Victor Wembanyama posts 12 blocks in Game 1",
+        "Jalen Brunson scores 35 in MSG playoff win",
+      ],
+
+      // FAQ
+      faq: [
+        { q:"When does the NBA Finals start?", a:"The 2026 NBA Finals are scheduled to begin on June 4, 2026. The matchup will be determined by the Western and Eastern Conference Finals, both currently in progress." },
+        { q:"Which teams are in the Conference Finals?", a:"The Western Conference Finals features the #1 Oklahoma City Thunder vs #2 San Antonio Spurs (series tied 1-1). The Eastern Conference Finals has the #3 New York Knicks leading the #4 Cleveland Cavaliers 1-0." },
+        { q:"How does the NBA Playoff format work?", a:"The NBA Playoffs are a best-of-7 series at every round. The team that wins 4 games advances. The conference champions then meet in the NBA Finals." },
+        { q:"Where can I watch NBA Playoffs games?", a:"NBA Playoffs games air nationally on ABC, ESPN, TNT, and NBA TV. Streaming options include ESPN+, Max (HBO), and the NBA League Pass app." },
+        { q:"Who is the favorite to win the NBA championship?", a:"The Oklahoma City Thunder entered the playoffs with the NBA's best regular-season record (64-18) and are widely considered the favorite heading into the Conference Finals." },
+        { q:"How do I get live score updates?", a:"Sign up for our newsletter above for real-time push alerts, or bookmark this page for live score tracking throughout the playoffs." },
+      ],
+
+      socialLinks: { twitter:"#", instagram:"#", youtube:"#", tiktok:"#" }
+    };
+
+    /* ============================================================
+       APPLY PRIMARY COLOR FROM CONFIG
+    ============================================================ */
+    document.documentElement.style.setProperty('--primary', EVENT_CONFIG.primaryColor);
+    document.documentElement.style.setProperty('--secondary', EVENT_CONFIG.secondaryColor);
+
+    /* ============================================================
+       COUNTDOWN TIMER
+    ============================================================ */
+    function updateCountdown() {
+      const target = new Date(EVENT_CONFIG.countdownDate).getTime();
+      const now = Date.now();
+      const diff = target - now;
+      if (diff <= 0) {
+        document.getElementById('countdown-strip').style.display = 'none';
+        return;
+      }
+      const h = Math.floor(diff / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+      document.getElementById('cd-mins').textContent  = String(m).padStart(2,'0');
+      document.getElementById('cd-secs').textContent  = String(s).padStart(2,'0');
+      document.getElementById('countdown-game-label').textContent = '· ' + EVENT_CONFIG.featuredMatchup;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    /* ============================================================
+       ANIMATED COUNTERS
+    ============================================================ */
+    function animateCounters() {
+      document.querySelectorAll('.counter').forEach(el => {
+        const target = parseInt(el.dataset.target, 10);
+        let current = 0;
+        const step = Math.ceil(target / 60);
+        const interval = setInterval(() => {
+          current = Math.min(current + step, target);
+          el.textContent = current.toLocaleString();
+          if (current >= target) clearInterval(interval);
+        }, 25);
+      });
+    }
+
+    /* ============================================================
+       SCROLL REVEAL
+    ============================================================ */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          if (e.target.querySelector('.counter')) animateCounters();
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    /* ============================================================
+       GAMES GRID
+    ============================================================ */
+    function renderGames() {
+      const grid = document.getElementById('games-grid');
+      grid.innerHTML = EVENT_CONFIG.upcomingGames.map(g => {
+        const hasProp = g.probHome !== null;
+        const probBar = hasProp ? `
+          <div class="win-prob-mini">
+            <div class="win-prob-mini-bar">
+              <div class="win-prob-mini-fill" style="width:${g.probHome}%"></div>
+            </div>
+            <div class="win-prob-labels"><span>${g.away} ${g.probAway}%</span><span>${g.probHome}% ${g.home}</span></div>
+          </div>` : '';
+        return `
+          <div class="glass-card game-card reveal">
+            <div class="game-card-top">
+              <span class="game-series">${g.series}</span>
+              <span class="badge badge-scheduled">Upcoming</span>
+            </div>
+            <div class="game-teams">
+              <div class="game-team-row">
+                <div class="game-team-info">
+                  <div class="game-team-logo">${g.away}</div>
+                  <div><div class="game-team-name">${g.awayFull}</div><div class="game-team-seed">Away</div></div>
+                </div>
+                <div class="game-score scheduled">–</div>
+              </div>
+              <div class="game-divider"></div>
+              <div class="game-team-row">
+                <div class="game-team-info">
+                  <div class="game-team-logo">${g.home}</div>
+                  <div><div class="game-team-name">${g.homeFull}</div><div class="game-team-seed">Home</div></div>
+                </div>
+                <div class="game-score scheduled">–</div>
+              </div>
+            </div>
+            <div class="game-time">🗓 ${g.date} · ${g.time}</div>
+            ${probBar}
+          </div>`;
+      }).join('');
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }
+    renderGames();
+
+    /* ============================================================
+       STANDINGS TABLE
+    ============================================================ */
+    let currentConf = 'east';
+    function renderStandings(conf) {
+      const data = EVENT_CONFIG.standings[conf];
+      document.getElementById('standings-body').innerHTML = data.map((t, i) => `
+        <tr>
+          <td>
+            <span class="standings-rank ${i < 3 ? 'top3' : ''}">${i+1}</span>
+            <span class="standings-team-name">${t.name}</span>
+            ${i < 8 ? '<span style="font-size:10px;color:#4d9eff;margin-left:8px;">PLAYOFF</span>' : ''}
+          </td>
+          <td>${t.w}</td>
+          <td>${t.l}</td>
+          <td class="win-pct">${t.pct.toFixed(3)}</td>
+        </tr>`).join('');
+    }
+    function switchConf(conf, btn) {
+      currentConf = conf;
+      document.querySelectorAll('.standings-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      renderStandings(conf);
+    }
+    renderStandings('east');
+
+    /* ============================================================
+       PLAYERS GRID
+    ============================================================ */
+    function renderPlayers() {
+      document.getElementById('players-grid').innerHTML = EVENT_CONFIG.playerHighlights.map((p, i) => `
+        <div class="glass-card player-card reveal reveal-delay-${i%4}">
+          <div class="player-avatar">${p.initials}</div>
+          <div class="player-name">${p.name}</div>
+          <div class="player-team">${p.team}</div>
+          <div class="player-stats">
+            <div class="player-stat"><div class="player-stat-val">${p.pts}</div><div class="player-stat-lbl">PPG</div></div>
+            <div class="player-stat"><div class="player-stat-val">${p.ast}</div><div class="player-stat-lbl">APG</div></div>
+            <div class="player-stat"><div class="player-stat-val">${p.reb}</div><div class="player-stat-lbl">RPG</div></div>
+          </div>
+          <div class="achievement-badges">${p.badges.map(b => `<span class="achievement-badge">🏅 ${b}</span>`).join('')}</div>
+        </div>`).join('');
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }
+    renderPlayers();
+
+    /* ============================================================
+       NEWS GRID
+    ============================================================ */
+    function renderNews() {
+      const featured = EVENT_CONFIG.trendingStories[0];
+      const secondary = EVENT_CONFIG.trendingStories.slice(1);
+      let html = `
+        <div class="news-featured">
+          <div class="glass-card news-card">
+            <div class="news-thumb">📸 Featured Story Image</div>
+            <span class="tag">${featured.category}</span>
+            <h3 class="news-headline">${featured.headline}</h3>
+            <p class="news-excerpt">${featured.excerpt}</p>
+            <div class="news-meta">${featured.date}</div>
+            <a href="#" class="news-read-more">Read Full Story →</a>
+          </div>
+        </div>`;
+      html += secondary.map(s => `
+        <div>
+          <div class="glass-card news-card">
+            <span class="tag">${s.category}</span>
+            <h3 class="news-headline" style="font-size:clamp(14px,2vw,17px)">${s.headline}</h3>
+            <p class="news-excerpt">${s.excerpt}</p>
+            <div class="news-meta">${s.date}</div>
+            <a href="#" class="news-read-more">Read More →</a>
+          </div>
+        </div>`).join('');
+      document.getElementById('news-grid').innerHTML = html;
+    }
+    renderNews();
+
+    /* ============================================================
+       HIGHLIGHTS
+    ============================================================ */
+    function renderHighlights() {
+      document.getElementById('highlights-grid').innerHTML = EVENT_CONFIG.highlights.map(h => `
+        <div class="glass-card highlight-card reveal">
+          <div class="highlight-thumb">
+            <div class="play-btn"><div class="play-icon"></div></div>
+          </div>
+          <div class="highlight-info">
+            <div class="highlight-title">${h.title}</div>
+            <div class="highlight-meta">🏀 ${h.team} · ▶ ${h.duration}</div>
+          </div>
+        </div>`).join('');
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }
+    renderHighlights();
+
+    /* ============================================================
+       FAN POLL
+    ============================================================ */
+    function renderPoll() {
+      document.getElementById('poll-options').innerHTML = EVENT_CONFIG.pollOptions.map(opt => `
+        <div class="poll-option">
+          <div class="poll-option-label">
+            <span>${opt.label}</span>
+            <span class="poll-pct">${opt.pct}%</span>
+          </div>
+          <div class="poll-bar-bg">
+            <div class="poll-bar-fill" style="width:${opt.pct}%;background:${opt.color}"></div>
+          </div>
+        </div>`).join('');
+    }
+    renderPoll();
+    function castVote() {
+      const btn = document.querySelector('.poll-vote-btn');
+      btn.textContent = '✅ Vote Counted! Thank you.';
+      btn.style.background = '#2a7a2a';
+      setTimeout(() => { btn.textContent = 'Submit Vote'; btn.style.background = ''; }, 3000);
+    }
+
+    /* ============================================================
+       POPULAR TEAMS
+    ============================================================ */
+    function renderPopularTeams() {
+      document.getElementById('popular-teams').innerHTML = EVENT_CONFIG.popularTeams.map((t, i) => `
+        <div class="popular-team-item">
+          <div class="popular-team-rank">${i+1}</div>
+          <div class="popular-team-badge">${t.abbr}</div>
+          <div class="popular-team-name">${t.name}</div>
+          <div class="popular-team-fans">${t.fans}</div>
+        </div>`).join('');
+    }
+    renderPopularTeams();
+
+    /* ============================================================
+       SOCIAL PROOF
+    ============================================================ */
+    function renderProof() {
+      document.getElementById('proof-grid').innerHTML = EVENT_CONFIG.proofStats.map(s => `
+        <div class="glass-card proof-card reveal">
+          <div class="proof-num">${s.num}</div>
+          <div class="proof-label">${s.label}</div>
+        </div>`).join('');
+      document.getElementById('ticker-text').textContent = EVENT_CONFIG.tickerItems.join('   ·   ');
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }
+    renderProof();
+
+    /* ============================================================
+       FAQ ACCORDION
+    ============================================================ */
+    function renderFAQ() {
+      document.getElementById('faq-list').innerHTML = EVENT_CONFIG.faq.map((item, i) => `
+        <div class="faq-item" id="faq-${i}">
+          <button class="faq-question" onclick="toggleFAQ(${i})" aria-expanded="false" aria-controls="faq-ans-${i}">
+            <span>${item.q}</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq-ans-${i}" role="region">
+            <div class="faq-answer-inner">${item.a}</div>
+          </div>
+        </div>`).join('');
+    }
+    renderFAQ();
+    function toggleFAQ(i) {
+      const item = document.getElementById('faq-' + i);
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    /* ============================================================
+       NEWSLETTER
+    ============================================================ */
+    function subscribeEmail() {
+      const email = document.getElementById('nl-email').value;
+      const btn = document.querySelector('.newsletter-form .btn-primary');
+      if (!email.includes('@')) { btn.textContent = '⚠️ Check email'; setTimeout(()=>{ btn.textContent='Get Alerts 🏀'; }, 2000); return; }
+      btn.textContent = '✅ You\'re in!';
+      btn.style.background = '#2a7a2a';
+      document.getElementById('nl-email').value = '';
+      setTimeout(() => { btn.textContent = 'Get Alerts 🏀'; btn.style.background = ''; }, 3000);
+    }
+
+    /* ============================================================
+       MOBILE NAV
+    ============================================================ */
+    function toggleNav() {
+      const links = document.getElementById('nav-links');
+      const isOpen = links.style.display === 'flex';
+      links.style.display = isOpen ? '' : 'flex';
+      links.style.flexDirection = 'column';
+      links.style.position = 'fixed';
+      links.style.top = '60px';
+      links.style.left = '0'; links.style.right = '0';
+      links.style.background = 'rgba(8,12,20,0.97)';
+      links.style.padding = '20px';
+      links.style.borderBottom = '1px solid rgba(255,255,255,0.08)';
+      links.style.backdropFilter = 'blur(18px)';
+      links.style.gap = '16px';
+      if (isOpen) { links.style.display = 'none'; }
+    }
+    document.querySelectorAll('#nav-links a').forEach(a => a.addEventListener('click', () => { document.getElementById('nav-links').style.display = ''; }));
+
+    /* ============================================================
+       NAV SCROLL EFFECT
+    ============================================================ */
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('top-nav');
+      nav.style.background = window.scrollY > 50
+        ? 'rgba(8,12,20,0.97)'
+        : 'rgba(8,12,20,0.88)';
+    });
+
+    /* ============================================================
+       INITIAL REVEAL PASS
+    ============================================================ */
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    // Trigger counters on load if in viewport
+    setTimeout(() => { animateCounters(); }, 500);
+  </script>
+</body>
+</html>
