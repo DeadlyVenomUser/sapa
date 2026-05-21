@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>NBA Playoffs | Official Sports Network</title>
+    <meta name="description" content="Watch live NBA Playoffs games, latest highlights, standings, and breaking news. Exclusive coverage and analysis.">
+    <meta name="keywords" content="NBA, Basketball, Playoffs, Live Scores, Highlights, Standings">
+    <meta name="author" content="Sports Network">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="NBA Playoffs - Live Action & Highlights">
+    <meta property="og:description" content="Watch the best moments from the NBA Playoffs. Live scores, player stats, and exclusive content.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://placehold.co/1200x630/1a1a2e/ff6b00?text=NBA+Playoffs">
+    <meta property="og:url" content="https://www.sportsnetwork.com/nba-playoffs">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NBA Playoffs - Live Action & Highlights">
+    <meta name="twitter:description" content="Watch the best moments from the NBA Playoffs.">
+    <meta name="twitter:image" content="https://placehold.co/1200x600/1a1a2e/ff6b00?text=NBA+Playoffs">
+    
+    <!-- Structured Data (SportsEvent) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsEvent",
+      "name": "NBA Playoffs",
+      "startDate": "2026-05-22T19:00:00-05:00",
+      "location": {
+        "@type": "Place",
+        "name": "NBA Arena"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "National Basketball Association"
+      }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #0a0c15;
+            color: #ffffff;
+            scroll-behavior: smooth;
+            line-height: 1.5;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #11131f; }
+        ::-webkit-scrollbar-thumb { background: #ff6b00; border-radius: 10px; }
+
+        /* Glassmorphism & Modern Effects */
+        .glass-card {
+            background: rgba(20, 25, 40, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 107, 0, 0.2);
+            border-radius: 28px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.5);
+            border-color: rgba(255, 107, 0, 0.5);
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ff6b00, #ff3c00);
+            border: none;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+            box-shadow: 0 8px 20px rgba(255, 107, 0, 0.3);
+        }
+        .btn-primary:hover {
+            transform: scale(1.02);
+            filter: brightness(1.05);
+            box-shadow: 0 12px 25px rgba(255, 107, 0, 0.4);
+        }
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,107,0,0.6);
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: bold;
+            color: white;
+            backdrop-filter: blur(4px);
+            transition: 0.3s;
+        }
+        .btn-secondary:hover {
+            background: rgba(255,107,0,0.2);
+            border-color: #ff6b00;
+        }
+
+        /* Countdown Timer */
+        .countdown-number {
+            background: #000000aa;
+            backdrop-filter: blur(8px);
+            padding: 8px 18px;
+            border-radius: 60px;
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+
+        /* Standings Table */
+        .standings-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .standings-table th, .standings-table td {
+            padding: 14px 8px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .standings-table th {
+            color: #ff6b00;
+            cursor: pointer;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .countdown-number { font-size: 0.9rem; padding: 5px 12px; }
+            .glass-card { border-radius: 20px; }
+        }
+
+        /* Ad Containers */
+        .ad-container {
+            background: rgba(0,0,0,0.3);
+            border-radius: 20px;
+            text-align: center;
+            padding: 1rem;
+            border: 1px dashed rgba(255,107,0,0.3);
+            color: #aaa;
+            font-size: 0.8rem;
+        }
+
+        /* Sticky Footer Ad */
+        .sticky-mobile-ad {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #0f1119;
+            z-index: 1000;
+            padding: 8px;
+            display: none;
+            border-top: 1px solid #ff6b00;
+        }
+        @media (max-width: 768px) {
+            .sticky-mobile-ad { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ==================== MASTER CONFIGURATION ==================== -->
+<script>
+const EVENT_CONFIG = {
+    league: "NBA",
+    eventTitle: "NBA Playoffs",
+    subtitle: "Latest Games, Highlights & Standings",
+    heroImage: "https://placehold.co/1920x800/0a0c15/ff6b00?text=NBA+Finals+2026",
+    backgroundImage: "",
+    primaryColor: "#ff6b00",
+    secondaryColor: "#0057ff",
+    featuredMatchup: "Lakers vs Warriors",
+    matchupDate: "May 22, 2026 - 9:00 PM ET",
+    countdownDate: "May 22, 2026 21:00:00 GMT-0400",
+    affiliateButtonUrl: "https://example.com/watch-nba",
+    newsletterEnabled: true,
+    adEnabled: true,
+    teams: [
+        { name: "Lakers", wins: 52, losses: 30, logo: "🏀" },
+        { name: "Warriors", wins: 49, losses: 33, logo: "🏀" },
+        { name: "Celtics", wins: 57, losses: 25, logo: "🏀" },
+        { name: "Bucks", wins: 55, losses: 27, logo: "🏀" }
+    ],
+    standings: [
+        { team: "Boston Celtics", wins: 57, losses: 25, pct: 0.695 },
+        { team: "Milwaukee Bucks", wins: 55, losses: 27, pct: 0.671 },
+        { team: "LA Lakers", wins: 52, losses: 30, pct: 0.634 },
+        { team: "Golden State", wins: 49, losses: 33, pct: 0.598 }
+    ],
+    playerHighlights: [
+        { name: "LeBron James", stat: "28.9 PPG", achievement: "All-Star MVP", image: "👑" },
+        { name: "Stephen Curry", stat: "32.4 PPG", achievement: "3PT Leader", image: "🎯" },
+        { name: "Giannis", stat: "31.1 PPG / 11.8 REB", achievement: "DPOY", image: "🇬🇷" }
+    ],
+    trendingStories: [
+        { title: "Lakers-Warriors Rivalry Reaches New Heights", category: "Analysis", link: "#" },
+        { title: "Top 10 Playoff Moments So Far", category: "Highlights", link: "#" },
+        { title: "Rookie Sensation Taking Over", category: "Rising Stars", link: "#" }
+    ],
+    socialLinks: { twitter: "#", instagram: "#", facebook: "#" }
+};
+</script>
+
+<div id="app"></div>
+
+<script>
+    // Render entire page dynamically from EVENT_CONFIG
+    const config = EVENT_CONFIG;
+
+    // Helper functions
+    function updateCountdown() {
+        const countdownEl = document.getElementById('countdown-timer');
+        if(!countdownEl) return;
+        const target = new Date(config.countdownDate).getTime();
+        const interval = setInterval(() => {
+            const now = new Date().getTime();
+            const diff = target - now;
+            if(diff <= 0) { countdownEl.innerHTML = "Game Started!"; clearInterval(interval); return; }
+            const days = Math.floor(diff/(1000*60*60*24));
+            const hours = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+            const mins = Math.floor((diff%(1000*60*60))/(1000*60));
+            const secs = Math.floor((diff%(1000*60))/1000);
+            countdownEl.innerHTML = `${days}d ${hours}h ${mins}m ${secs}s`;
+        }, 1000);
+    }
+
+    function animateNumbers() {
+        const counters = document.querySelectorAll('.stat-counter');
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                let count = +counter.innerText;
+                let speed = target/80;
+                if(count < target) {
+                    counter.innerText = Math.ceil(count + speed);
+                    setTimeout(updateCount, 20);
+                } else counter.innerText = target;
+            };
+            updateCount();
+        });
+    }
+
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    document.addEventListener("DOMContentLoaded", () => {
+        renderMainContent();
+        attachEventHandlers();
+        updateCountdown();
+        animateNumbers();
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+        // Disable right click and source viewing attempts (basic protection)
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('keydown', e => { if(e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) { e.preventDefault(); return false; } });
+    });
+
+    function attachEventHandlers() {
+        // Newsletter submission
+        const newsletterForm = document.getElementById('newsletter-form');
+        if(newsletterForm) {
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert("Thank you! You're now subscribed to exclusive sports updates.");
+                newsletterForm.reset();
+            });
+        }
+        // Affiliate button
+        const watchBtn = document.getElementById('watch-now-btn');
+        if(watchBtn && config.affiliateButtonUrl) watchBtn.onclick = () => window.open(config.affiliateButtonUrl, '_blank');
+        
+        // Sorting standings
+        const standingsTable = document.getElementById('standings-tbody');
+        let sortAsc = true;
+        const sortHeader = document.getElementById('sort-standings');
+        if(sortHeader) {
+            sortHeader.addEventListener('click', () => {
+                const rows = Array.from(standingsTable.querySelectorAll('tr'));
+                sortAsc = !sortAsc;
+                rows.sort((a,b) => {
+                    const aWins = parseInt(a.cells[1].innerText);
+                    const bWins = parseInt(b.cells[1].innerText);
+                    return sortAsc ? bWins - aWins : aWins - bWins;
+                });
+                rows.forEach(row => standingsTable.appendChild(row));
+            });
+        }
+    }
+
+    function renderMainContent() {
+        const html = `
+        <div style="max-width:1400px; margin:0 auto;">
+            <!-- Header Leaderboard Ad -->
+            <div class="ad-container" style="margin:15px auto; max-width:970px;">📢 Header Leaderboard Ad — Your brand here</div>
+            
+            <!-- HERO SECTION -->
+            <section class="hero" style="background: linear-gradient(120deg, #0a0c15, #11131f), url('${config.heroImage}') center/cover no-repeat; padding: 60px 20px; border-radius: 0 0 40px 40px;">
+                <div class="reveal" style="max-width:900px; margin:auto; text-align:center;">
+                    <span style="background:${config.primaryColor}; padding:6px 18px; border-radius:50px; font-weight:bold;">${config.league} OFFICIAL</span>
+                    <h1 style="font-size:3.5rem; margin:20px 0;">${config.eventTitle}</h1>
+                    <p style="font-size:1.3rem; opacity:0.9;">${config.subtitle}</p>
+                    <div class="glass-card" style="margin:30px auto; padding:20px; max-width:650px;">
+                        <div style="font-size:1.8rem;">🏆 ${config.featuredMatchup}</div>
+                        <div>${config.matchupDate}</div>
+                        <div id="countdown-timer" class="countdown-number" style="margin:15px auto; display:inline-block;">--</div>
+                        <div><button id="watch-now-btn" class="btn-primary" style="margin-top:15px;">🎬 Watch Now & Register</button>
+                        <button class="btn-secondary" style="margin-left:10px;">📊 Game Preview</button></div>
+                    </div>
+                    <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin-top:20px;">
+                        <div class="glass-card" style="padding:10px 20px;"><span class="stat-counter" data-target="152">0</span>M+ Fans Watching</div>
+                        <div class="glass-card" style="padding:10px 20px;"><span class="stat-counter" data-target="87">0</span>% Engagement</div>
+                        <div class="glass-card" style="padding:10px 20px;"><span class="stat-counter" data-target="24">0</span>M Social Buzz</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- In Content Banner Ad -->
+            <div class="ad-container" style="margin:30px auto; max-width:728px;">📢 In Content Banner Ad — Reach millions of sports fans</div>
+            
+            <!-- FEATURED MATCHUP SECTION -->
+            <section style="padding: 60px 20px;">
+                <h2 class="reveal" style="font-size:2rem;">🔥 Featured Matchup: ${config.featuredMatchup}</h2>
+                <div style="display:flex; gap:30px; flex-wrap:wrap; justify-content:center; margin-top:30px;">
+                    <div class="glass-card reveal" style="flex:1; min-width:200px; padding:30px; text-align:center;">
+                        <div style="font-size:5rem;">🏀</div><h3>Lakers</h3><p>52-30 | Western Conf.</p>
+                    </div>
+                    <div style="font-size:3rem; align-self:center;">VS</div>
+                    <div class="glass-card reveal" style="flex:1; min-width:200px; padding:30px; text-align:center;">
+                        <div style="font-size:5rem;">🏀</div><h3>Warriors</h3><p>49-33 | Western Conf.</p>
+                    </div>
+                </div>
+                <div class="reveal" style="text-align:center; margin-top:30px;"><p>Preview: The ultimate rivalry renews for Game 7 intensity. Steph Curry vs LeBron James — don't miss this thriller.</p>
+                <button class="btn-primary" style="margin-top:15px;">Get Tickets →</button></div>
+            </section>
+            
+            <!-- TODAY'S GAMES -->
+            <section style="padding: 40px 20px; background: #0c0e17;">
+                <h2 class="reveal">📅 Today's Games</h2>
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:25px; margin-top:30px;">
+                    ${config.teams.map(t => `<div class="glass-card reveal" style="padding:20px;"><div style="font-size:2rem;">${t.logo}</div><strong>${t.name}</strong> <span>${t.wins}-${t.losses}</span><br><small>Tip-off: 7:30 PM ET</small><button class="btn-secondary" style="margin-top:12px; width:100%;">Live Stats</button></div>`).join('')}
+                </div>
+            </section>
+            
+            <!-- STANDINGS + Sorting -->
+            <section style="padding: 60px 20px;">
+                <h2 class="reveal">🏆 Conference Standings <span id="sort-standings" style="cursor:pointer; font-size:0.9rem; background:#ff6b0022; padding:4px 12px; border-radius:30px;">Sort by Wins 🔽</span></h2>
+                <div class="glass-card" style="overflow-x:auto; padding:15px;">
+                    <table class="standings-table">
+                        <thead><tr><th>Team</th><th>Wins</th><th>Losses</th><th>Win%</th></tr></thead>
+                        <tbody id="standings-tbody">
+                            ${config.standings.map(s => `<tr><td>${s.team}</td><td>${s.wins}</td><td>${s.losses}</td><td>${s.pct}</td></tr>`).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- Mid Article Ad -->
+            <div class="ad-container" style="margin:20px auto;">📢 Mid Article Ad — Premium Native Placement</div>
+            
+            <!-- PLAYER SPOTLIGHT -->
+            <section style="padding: 40px 20px;">
+                <h2 class="reveal">🌟 Player Spotlight</h2>
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:25px;">
+                    ${config.playerHighlights.map(p => `<div class="glass-card reveal" style="padding:25px; text-align:center;"><div style="font-size:4rem;">${p.image}</div><h3>${p.name}</h3><p>${p.stat}</p><span class="btn-secondary" style="padding:4px 12px;">${p.achievement}</span></div>`).join('')}
+                </div>
+            </section>
+            
+            <!-- TRENDING NEWS + NATIVE AD -->
+            <section style="padding: 60px 20px;">
+                <h2 class="reveal">📰 Trending Sports News</h2>
+                <div style="display:grid; grid-template-columns:2fr 1fr; gap:25px;">
+                    <div class="glass-card reveal" style="padding:30px;"><h3>🔥 ${config.trendingStories[0].title}</h3><span class="btn-secondary">${config.trendingStories[0].category}</span><p>Full analysis of the key plays that defined the series.</p><button class="btn-primary" style="margin-top:15px;">Read Full Story</button></div>
+                    <div style="display:flex; flex-direction:column; gap:20px;">${config.trendingStories.slice(1).map(s => `<div class="glass-card reveal" style="padding:20px;"><h4>${s.title}</h4><span>${s.category}</span><button class="btn-secondary" style="margin-top:8px;">Read more</button></div>`).join('')}</div>
+                </div>
+                <!-- Native Content Ad -->
+                <div class="ad-container" style="margin-top:30px;">📢 Native Content Ad — Sponsored: Best betting offers</div>
+            </section>
+            
+            <!-- HIGHLIGHTS SECTION -->
+            <section style="padding: 40px 20px;">
+                <h2>🎬 Top Highlights</h2>
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:25px;">
+                    <div class="glass-card reveal" style="height:200px; display:flex; align-items:center; justify-content:center; flex-direction:column;">▶️ Game 5 Buzzer Beater</div>
+                    <div class="glass-card reveal" style="height:200px; display:flex; align-items:center; justify-content:center;">🎥 Curry 40-point triple-double</div>
+                    <div class="glass-card reveal" style="height:200px; display:flex; align-items:center; justify-content:center;">🏀 Dunk of the Night</div>
+                </div>
+            </section>
+            
+            <!-- FAN FAVORITES + POLL -->
+            <section style="padding: 60px 20px; background: #0b0d15;">
+                <h2 class="reveal">🏅 Fan Favorites & Poll</h2>
+                <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px;">
+                    <div class="glass-card reveal" style="padding:20px;"><h3>🏀 Most Popular Team</h3><p>Los Angeles Lakers — 42% fan votes</p><progress value="42" max="100"></progress></div>
+                    <div class="glass-card reveal" style="padding:20px;"><h3>📊 Who wins the title?</h3><button class="btn-secondary">Lakers</button> <button class="btn-secondary">Warriors</button> <button class="btn-secondary">Celtics</button></div>
+                    <div class="glass-card reveal" style="padding:20px;"><h3>❤️ Fan engagement</h3><p>🔥 1.2M comments this week</p></div>
+                </div>
+            </section>
+            
+            <!-- EMAIL NEWSLETTER SECTION -->
+            ${config.newsletterEnabled ? `<section style="padding: 60px 20px; background: linear-gradient(145deg, #11131f, #0a0c15);">
+                <div class="glass-card" style="max-width:600px; margin:auto; padding:45px 30px; text-align:center;">
+                    <h2>🏀 Never Miss a Moment</h2><p>Get exclusive playoffs access + insider analysis</p>
+                    <form id="newsletter-form"><div style="display:flex; flex-wrap:wrap; gap:10px;"><input type="email" placeholder="Your best email" style="flex:2; padding:12px; border-radius:50px; border:none;" required><button type="submit" class="btn-primary">Subscribe →</button></div><p style="margin-top:15px; font-size:0.8rem;">No spam, unsubscribe anytime.</p></form>
+                </div>
+            </section>` : ''}
+            
+            <!-- SOCIAL PROOF -->
+            <section style="padding: 40px 20px; text-align:center;">
+                <div style="display:flex; justify-content:center; gap:40px; flex-wrap:wrap;">
+                    <div><span class="stat-counter" data-target="128">0</span>k+ Subscribers</div>
+                    <div><span class="stat-counter" data-target="8.4">0</span>M Monthly Visitors</div>
+                    <div>📈 #1 Trending Sports</div>
+                </div>
+            </section>
+            
+            <!-- FAQ ACCORDION -->
+            <section style="padding: 40px 20px;">
+                <h2 class="reveal">❓ Fan Questions</h2>
+                <div class="glass-card"><details><summary>🏀 How can I watch live games?</summary><p>Stream via official affiliate link with exclusive offers.</p></details><hr><details><summary>📅 When are NBA Finals?</summary><p>Starting June 1st, schedule TBA.</p></details><hr><details><summary>🎟️ How to get tickets?</summary><p>Visit our partners for verified resale tickets.</p></details></div>
+            </section>
+            
+            <!-- FINAL CTA -->
+            <section style="padding: 70px 20px; text-align:center;">
+                <div class="glass-card" style="max-width:800px; margin:auto; padding:50px;">
+                    <h2>🏆 The Road to the Championship 🏆</h2>
+                    <p>Set a reminder & be first to know playoff updates</p>
+                    <button class="btn-primary" style="margin:20px;">Set Reminder →</button>
+                    <button class="btn-secondary">Download Schedule</button>
+                </div>
+            </section>
+            
+            <!-- Footer Banner Ad & Footer -->
+            <div class="ad-container" style="margin:30px auto;">📢 Footer Banner Ad — Sponsorship opportunities</div>
+            <footer style="background:#05070f; padding:40px 20px; text-align:center; margin-top:30px;">
+                <div style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap;"><a href="#" style="color:white;">Privacy Policy</a><a href="#" style="color:white;">Terms</a><a href="#" style="color:white;">Contact</a><a href="#" style="color:white;">Disclaimer</a></div>
+                <p style="margin-top:20px;">© 2026 Official Sports Network — ${config.league} Global Coverage. All trademarks belong to their respective owners.</p>
+            </footer>
+            
+            <!-- Sticky Mobile Footer Ad -->
+            <div class="sticky-mobile-ad ad-container">📱 Sticky Mobile Footer Ad — Limited offer!</div>
+            
+            <!-- Sidebar Ad Desktop (floating simulation) -->
+            <div style="position:fixed; right:10px; top:30%; width:160px; display:none;" class="ad-container sidebar-desktop">📌 Sidebar Ad Desktop</div>
+            <style>@media(min-width:1200px){ .sidebar-desktop{display:block;} }</style>
+        </div>
+        `;
+        document.getElementById('app').innerHTML = html;
+        setTimeout(() => { animateNumbers(); updateCountdown(); }, 100);
+    }
+</script>
+</body>
+</html>
