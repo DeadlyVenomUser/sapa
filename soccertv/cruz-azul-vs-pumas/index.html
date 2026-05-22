@@ -1,0 +1,2032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Watch Cruz Azul vs Pumas UNAM live - Liga MX. Stream the match online, get live scores, stats, and more." />
+  <meta name="keywords" content="Cruz Azul, Pumas UNAM, Liga MX, live stream, watch online, soccer, fútbol" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Cruz Azul vs Pumas UNAM — Liga MX Live" />
+  <meta property="og:description" content="Watch Cruz Azul vs Pumas UNAM live online. Liga MX match streaming, stats, and updates." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://placehold.co/1200x630/0a0e1a/00d4ff?text=Cruz+Azul+vs+Pumas" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cruz Azul vs Pumas UNAM — Liga MX Live" />
+  <link rel="canonical" href="https://example.com/cruz-azul-vs-pumas" />
+  <title id="page-title">Cruz Azul vs Pumas UNAM — Live Stream | Liga MX</title>
+
+  <style>
+    /* ─── CSS Variables ─────────────────────────────────────────── */
+    :root {
+      --bg-primary:    #080c18;
+      --bg-secondary:  #0d1225;
+      --bg-card:       #111827;
+      --bg-card2:      #161e32;
+      --accent-blue:   #1a6fd4;
+      --accent-cyan:   #00c8ff;
+      --accent-gold:   #f5a623;
+      --accent-green:  #22c55e;
+      --accent-red:    #ef4444;
+      --text-primary:  #f0f4ff;
+      --text-secondary:#94a3b8;
+      --text-muted:    #4b5563;
+      --border:        rgba(255,255,255,0.08);
+      --border-glow:   rgba(0,200,255,0.25);
+      --shadow-lg:     0 20px 60px rgba(0,0,0,0.6);
+      --radius-sm:     6px;
+      --radius-md:     12px;
+      --radius-lg:     20px;
+      --radius-xl:     32px;
+      --font-display:  'Oswald', 'Impact', 'Arial Narrow', sans-serif;
+      --font-body:     'Barlow', 'Segoe UI', system-ui, sans-serif;
+      --transition:    all 0.25s cubic-bezier(.4,0,.2,1);
+    }
+
+    /* ─── Google Fonts (self-fallback friendly) ─────────────────── */
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow:wght@300;400;500;600;700&display=swap');
+
+    /* ─── Reset ─────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; outline: none; }
+    img { max-width: 100%; height: auto; }
+    ul { list-style: none; }
+
+    /* ─── Scrollbar ─────────────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg-primary); }
+    ::-webkit-scrollbar-thumb { background: var(--accent-blue); border-radius: 3px; }
+
+    /* ─── Utility ───────────────────────────────────────────────── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .sr-only { position: absolute; width:1px; height:1px; padding:0; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    .glow-text { text-shadow: 0 0 30px rgba(0,200,255,0.5); }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .section { padding: 60px 0; }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-cyan), transparent);
+      border-radius: 1px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .badge-live {
+      background: rgba(239,68,68,0.2);
+      border: 1px solid var(--accent-red);
+      color: #fca5a5;
+    }
+    .badge-live::before {
+      content: '';
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--accent-red);
+      animation: pulse 1.4s ease infinite;
+    }
+    .badge-soon {
+      background: rgba(245,166,35,0.15);
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold);
+    }
+    @keyframes pulse {
+      0%,100% { opacity:1; transform:scale(1); }
+      50% { opacity:.5; transform:scale(1.4); }
+    }
+
+    /* ─── Language Modal ────────────────────────────────────────── */
+    #lang-modal {
+      position: fixed; inset: 0; z-index: 9999;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(10px);
+      display: flex; align-items: center; justify-content: center;
+      padding: 20px;
+    }
+    .lang-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+    }
+    .lang-card h2 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+    .lang-card p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 28px; }
+    .lang-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .lang-btn {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 14px 12px;
+      color: var(--text-primary);
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: var(--transition);
+    }
+    .lang-btn:hover, .lang-btn:focus {
+      border-color: var(--accent-cyan);
+      background: rgba(0,200,255,0.08);
+      transform: translateY(-2px);
+    }
+    .lang-btn .flag { font-size: 1.4rem; }
+
+    /* ─── Header / Nav ──────────────────────────────────────────── */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(8,12,24,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      gap: 16px;
+    }
+    .site-logo {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--accent-cyan);
+    }
+    nav { display: flex; align-items: center; gap: 8px; }
+    .nav-link {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .nav-link:hover { color: var(--text-primary); background: rgba(255,255,255,0.06); }
+    .lang-toggle {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      display: flex; align-items: center; gap: 6px;
+      transition: var(--transition);
+    }
+    .lang-toggle:hover { border-color: var(--accent-cyan); }
+    /* Header Ad */
+    .header-ad {
+      width: 100%; background: rgba(26,111,212,0.07);
+      border-bottom: 1px solid var(--border);
+      text-align: center; padding: 8px 20px;
+      font-size: 0.72rem; color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    /* ─── Hero ──────────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 70px 0 60px;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(26,111,212,0.3), transparent),
+        radial-gradient(ellipse 50% 40% at 20% 80%, rgba(0,200,255,0.1), transparent),
+        var(--bg-primary);
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .hero-top {
+      text-align: center;
+    }
+    .competition-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(26,111,212,0.15);
+      border: 1px solid rgba(26,111,212,0.4);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .match-vs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(16px, 4vw, 48px);
+      margin-bottom: 28px;
+    }
+    .team-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+      max-width: 200px;
+    }
+    .team-logo-wrap {
+      width: clamp(70px, 15vw, 110px);
+      height: clamp(70px, 15vw, 110px);
+      border-radius: 50%;
+      background: var(--bg-card2);
+      border: 2px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+      transition: var(--transition);
+    }
+    .team-logo-wrap:hover { border-color: var(--accent-cyan); box-shadow: 0 0 40px rgba(0,200,255,0.2); }
+    .team-logo-wrap img { width: 75%; height: 75%; object-fit: contain; }
+    .team-logo-placeholder {
+      font-family: var(--font-display);
+      font-size: clamp(1rem, 3vw, 1.5rem);
+      font-weight: 700;
+      color: var(--accent-cyan);
+      letter-spacing: 0.05em;
+    }
+    .team-name {
+      font-family: var(--font-display);
+      font-size: clamp(0.9rem, 2.5vw, 1.15rem);
+      font-weight: 600;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      line-height: 1.2;
+    }
+    .vs-divider {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+    .vs-text {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 700;
+      color: var(--text-muted);
+      line-height: 1;
+    }
+    .live-status {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    .match-meta {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+    .match-meta span { display: flex; align-items: center; gap: 6px; }
+    .match-meta .icon { font-size: 0.9rem; }
+
+    /* ─── Countdown ─────────────────────────────────────────────── */
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: clamp(10px, 3vw, 20px);
+      margin-bottom: 36px;
+    }
+    .count-block {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: clamp(12px,3vw,20px) clamp(10px,3vw,24px);
+      text-align: center;
+      min-width: clamp(56px, 14vw, 80px);
+      position: relative;
+      overflow: hidden;
+    }
+    .count-block::before {
+      content: '';
+      position: absolute; top:0; left:0; right:0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue));
+    }
+    .count-num {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1;
+      color: var(--accent-cyan);
+    }
+    .count-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ─── CTA Buttons ───────────────────────────────────────────── */
+    .cta-group {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.03em;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn::after {
+      content: '';
+      position: absolute; inset:0;
+      background: rgba(255,255,255,0);
+      transition: var(--transition);
+    }
+    .btn:hover::after { background: rgba(255,255,255,0.08); }
+    .btn:active { transform: scale(0.97); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(0,200,255,0.3);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0,200,255,0.45);
+    }
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid var(--border);
+      color: var(--text-primary);
+    }
+    .btn-secondary:hover {
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+      transform: translateY(-2px);
+    }
+    .btn-outline-gold {
+      background: transparent;
+      border: 2px solid var(--accent-gold);
+      color: var(--accent-gold);
+    }
+    .btn-outline-gold:hover {
+      background: var(--accent-gold);
+      color: #000;
+      transform: translateY(-2px);
+    }
+
+    /* ─── Floating Watch Btn ────────────────────────────────────── */
+    #float-watch {
+      position: fixed;
+      bottom: 80px; right: 20px;
+      z-index: 90;
+      background: linear-gradient(135deg, var(--accent-red), #c0392b);
+      color: #fff;
+      border-radius: 100px;
+      padding: 13px 22px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      box-shadow: 0 6px 24px rgba(239,68,68,0.5);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+      animation: float-bob 3s ease-in-out infinite;
+    }
+    #float-watch:hover { transform: scale(1.05) translateY(-3px); }
+    @keyframes float-bob {
+      0%,100% { box-shadow: 0 6px 24px rgba(239,68,68,0.5); }
+      50% { box-shadow: 0 12px 36px rgba(239,68,68,0.6); }
+    }
+
+    /* ─── Ad Slots ──────────────────────────────────────────────── */
+    .ad-slot {
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 10px,
+        transparent 10px, transparent 20px
+      );
+      border: 1px dashed var(--text-muted);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 16px;
+    }
+    .ad-header { height: 70px; margin-bottom: 0; width: 100%; }
+    .ad-incontent { height: 90px; margin: 32px 0; }
+    .ad-video { height: 60px; margin-top: 16px; }
+    .ad-sidebar {
+      height: 300px;
+      display: none;
+    }
+    .ad-sticky-footer {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      height: 60px;
+      background: var(--bg-card);
+      border-top: 1px solid var(--border);
+      z-index: 88;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* ─── Video Player ──────────────────────────────────────────── */
+    .video-section { background: var(--bg-secondary); padding: 50px 0; }
+    .video-wrapper {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-lg);
+      background: #000;
+    }
+    .video-ratio {
+      position: relative;
+      padding-top: 56.25%; /* 16:9 */
+    }
+    .video-ratio video,
+    .video-ratio iframe {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+    .video-overlay {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      background: rgba(0,0,0,0.55);
+      transition: var(--transition);
+      cursor: pointer;
+      z-index: 5;
+    }
+    .video-overlay.hidden { opacity: 0; pointer-events: none; }
+    .play-btn-svg {
+      width: 72px; height: 72px;
+      background: rgba(255,255,255,0.12);
+      border: 3px solid rgba(255,255,255,0.5);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      transition: var(--transition);
+      backdrop-filter: blur(4px);
+    }
+    .play-btn-svg:hover { background: rgba(0,200,255,0.25); border-color: var(--accent-cyan); transform: scale(1.1); }
+    .play-btn-svg svg { fill: #fff; margin-left: 5px; }
+    .video-loading {
+      position: absolute; inset: 0;
+      background: var(--bg-primary);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 10;
+      border-radius: var(--radius-lg);
+    }
+    .spinner {
+      width: 48px; height: 48px;
+      border: 4px solid var(--border);
+      border-top-color: var(--accent-cyan);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .video-info-bar {
+      background: var(--bg-card);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      border-top: 1px solid var(--border);
+    }
+    .video-info-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+    .video-actions { display: flex; gap: 10px; }
+    .icon-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      display: flex; align-items: center; gap: 5px;
+      transition: var(--transition);
+    }
+    .icon-btn:hover { border-color: var(--accent-cyan); color: var(--accent-cyan); }
+
+    /* ─── Layout with Sidebar ───────────────────────────────────── */
+    .content-sidebar {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .sidebar { display: none; }
+
+    /* ─── Stats ─────────────────────────────────────────────────── */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px 16px;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .stat-card:hover { border-color: var(--border-glow); transform: translateY(-2px); }
+    .stat-val {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+    }
+    .stat-label { font-size: 0.75rem; color: var(--text-secondary); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .stat-bar-row { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
+    .stat-bar-wrap { flex: 1; height: 6px; background: var(--bg-secondary); border-radius: 3px; overflow: hidden; }
+    .stat-bar-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue)); transition: width 1.2s ease; }
+    .stat-team-name { font-size: 0.75rem; color: var(--text-muted); white-space: nowrap; }
+
+    /* ─── Affiliate Cards ───────────────────────────────────────── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .aff-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .aff-card:hover { border-color: var(--border-glow); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+    .aff-img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      background: var(--bg-card2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem;
+    }
+    .aff-body { padding: 18px; flex: 1; display: flex; flex-direction: column; gap: 8px; }
+    .aff-tag { font-size: 0.7rem; font-weight: 600; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 0.1em; }
+    .aff-title { font-family: var(--font-display); font-size: 1rem; font-weight: 600; line-height: 1.3; }
+    .aff-desc { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; flex: 1; }
+    .aff-cta { margin-top: 12px; }
+
+    /* ─── FAQ ───────────────────────────────────────────────────── */
+    .faq-list { display: flex; flex-direction: column; gap: 10px; }
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .faq-item.open { border-color: var(--border-glow); }
+    .faq-q {
+      width: 100%;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      color: var(--text-primary);
+      font-size: 0.92rem;
+      font-weight: 500;
+      text-align: left;
+      gap: 12px;
+      transition: var(--transition);
+    }
+    .faq-q:hover { color: var(--accent-cyan); }
+    .faq-arrow {
+      width: 22px; height: 22px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.75rem;
+      transition: var(--transition);
+    }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); border-color: var(--accent-cyan); color: var(--accent-cyan); }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.2s;
+      font-size: 0.87rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-a { max-height: 300px; }
+    .faq-a-inner { padding: 0 20px 18px; }
+
+    /* ─── Trust Indicators ──────────────────────────────────────── */
+    .trust-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 24px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+    }
+    .trust-icon { font-size: 1.1rem; }
+
+    /* ─── Social Share ──────────────────────────────────────────── */
+    .social-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      padding: 28px 0;
+    }
+    .social-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 100px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: var(--transition);
+      border: 1px solid var(--border);
+    }
+    .social-btn:hover { transform: translateY(-2px); }
+    .social-btn.tw { border-color: #1da1f2; color: #1da1f2; }
+    .social-btn.tw:hover { background: rgba(29,161,242,0.1); }
+    .social-btn.fb { border-color: #1877f2; color: #1877f2; }
+    .social-btn.fb:hover { background: rgba(24,119,242,0.1); }
+    .social-btn.wa { border-color: #25d366; color: #25d366; }
+    .social-btn.wa:hover { background: rgba(37,211,102,0.1); }
+    .social-btn.tg { border-color: #2ca5e0; color: #2ca5e0; }
+    .social-btn.tg:hover { background: rgba(44,165,224,0.1); }
+    .social-btn.cp { border-color: var(--border); color: var(--text-secondary); }
+    .social-btn.cp:hover { border-color: var(--accent-cyan); color: var(--accent-cyan); }
+
+    /* ─── Footer ────────────────────────────────────────────────── */
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      padding: 40px 0 100px;
+    }
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      color: var(--accent-cyan);
+      font-weight: 700;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-links a {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      transition: var(--transition);
+    }
+    .footer-links a:hover { color: var(--text-primary); }
+    .footer-copy { font-size: 0.78rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* ─── Back to Top ───────────────────────────────────────────── */
+    #back-top {
+      position: fixed;
+      bottom: 80px; left: 20px;
+      z-index: 90;
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      transition: var(--transition);
+      opacity: 0;
+      pointer-events: none;
+    }
+    #back-top.visible { opacity: 1; pointer-events: all; }
+    #back-top:hover { border-color: var(--accent-cyan); color: var(--accent-cyan); transform: translateY(-3px); }
+
+    /* ─── Responsive ────────────────────────────────────────────── */
+    @media (min-width: 640px) {
+      .stats-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (min-width: 768px) {
+      nav .nav-link { display: inline-flex; }
+      .ad-sidebar { display: flex; }
+    }
+    @media (min-width: 900px) {
+      .content-sidebar {
+        grid-template-columns: 1fr 280px;
+      }
+      .sidebar { display: block; }
+      .ad-sidebar { display: flex; align-items: center; justify-content: center; }
+    }
+
+    /* ─── Scroll Animation ──────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ Language Selection Modal ══════════════════════════════════ -->
+<div id="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title">
+  <div class="lang-card">
+    <h2 id="lang-modal-title">🌐 Select Language</h2>
+    <p>Choose your preferred language to continue</p>
+    <div class="lang-grid">
+      <button class="lang-btn" onclick="setLang('en')" aria-label="English">
+        <span class="flag">🇺🇸</span> English
+      </button>
+      <button class="lang-btn" onclick="setLang('es')" aria-label="Español">
+        <span class="flag">🇲🇽</span> Español
+      </button>
+      <button class="lang-btn" onclick="setLang('pt')" aria-label="Português">
+        <span class="flag">🇧🇷</span> Português
+      </button>
+      <button class="lang-btn" onclick="setLang('fr')" aria-label="Français">
+        <span class="flag">🇫🇷</span> Français
+      </button>
+      <button class="lang-btn" onclick="setLang('de')" aria-label="Deutsch">
+        <span class="flag">🇩🇪</span> Deutsch
+      </button>
+      <button class="lang-btn" onclick="setLang('it')" aria-label="Italiano">
+        <span class="flag">🇮🇹</span> Italiano
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ Header ════════════════════════════════════════════════════ -->
+<header role="banner">
+  <!-- AD SLOT 1: Header Banner Ad -->
+  <!-- Paste ad code here -->
+  <div class="header-ad ad-slot ad-header">
+    
+  </div>
+
+  <div class="header-inner container">
+    <a href="#" class="site-logo" aria-label="Soccer Live Stream">⚽ FUTBOL<span style="color:var(--text-muted)">LIVE</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#video" class="nav-link" data-i18n="nav.stream">Live Stream</a>
+      <a href="#stats" class="nav-link" data-i18n="nav.stats">Stats</a>
+      <a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a>
+    </nav>
+    <button class="lang-toggle" onclick="showLangModal()" aria-label="Change language">
+      <span id="current-flag">🌐</span>
+      <span id="current-lang-label">EN</span>
+    </button>
+  </div>
+</header>
+
+<!-- ═══ Hero Section ═══════════════════════════════════════════════ -->
+<section class="hero" aria-label="Match hero">
+  <div class="container">
+    <div class="hero-top">
+
+      <div class="competition-badge">
+        ⚽ <span id="hero-competition">Liga MX</span>
+      </div>
+
+      <!-- Live Badge -->
+      <div class="live-status">
+        <span id="match-badge" class="badge badge-soon" data-i18n="badge.soon">🕐 Upcoming Match</span>
+      </div>
+
+      <!-- Teams -->
+      <div class="match-vs" role="img" aria-label="Cruz Azul versus Pumas UNAM">
+        <div class="team-block">
+          <div class="team-logo-wrap">
+            <img id="home-logo-img" src="" alt="Cruz Azul logo" loading="lazy"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+              style="display:none" />
+            <div class="team-logo-placeholder" id="home-abbr" style="display:flex">CRU</div>
+          </div>
+          <div class="team-name" id="hero-home">Cruz Azul</div>
+        </div>
+
+        <div class="vs-divider">
+          <span class="vs-text glow-text">VS</span>
+        </div>
+
+        <div class="team-block">
+          <div class="team-logo-wrap">
+            <img id="away-logo-img" src="" alt="Pumas UNAM logo" loading="lazy"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+              style="display:none" />
+            <div class="team-logo-placeholder" id="away-abbr" style="display:flex">PUM</div>
+          </div>
+          <div class="team-name" id="hero-away">Pumas UNAM</div>
+        </div>
+      </div>
+
+      <!-- Match Meta -->
+      <div class="match-meta">
+        <span><span class="icon">📅</span> <span id="hero-date">May 21, 2026</span></span>
+        <span><span class="icon">🕗</span> <span id="hero-time">20:00</span></span>
+        <span><span class="icon">🏟️</span> <span data-i18n="hero.venue">Estadio Ciudad de los Deportes, Mexico City, Mexico
+</span></span>
+      </div>
+
+      <!-- Countdown -->
+      <div class="countdown" aria-label="Match countdown timer">
+        <div class="count-block">
+          <div class="count-num" id="cd-days">--</div>
+          <div class="count-label" data-i18n="cd.days">Days</div>
+        </div>
+        <div class="count-block">
+          <div class="count-num" id="cd-hours">--</div>
+          <div class="count-label" data-i18n="cd.hours">Hours</div>
+        </div>
+        <div class="count-block">
+          <div class="count-num" id="cd-mins">--</div>
+          <div class="count-label" data-i18n="cd.mins">Mins</div>
+        </div>
+        <div class="count-block">
+          <div class="count-num" id="cd-secs">--</div>
+          <div class="count-label" data-i18n="cd.secs">Secs</div>
+        </div>
+      </div>
+
+      <!-- CTAs -->
+      <div class="cta-group">
+        <a href="#video" class="btn btn-primary" role="button" data-i18n="https://trusthubmedia.com/app/aff/go/hdstream?i=23">
+          ▶ Watch Now Live
+        </a>
+        <button class="btn btn-secondary" onclick="shareMatch()" data-i18n="cta.share">
+          🔗 Share Match
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Trust Bar ════════════════════════════════════════════════ -->
+<div class="container">
+  <div class="trust-bar reveal">
+    <div class="trust-item"><span class="trust-icon">🔒</span> <span data-i18n="trust.secure">Secure Streaming</span></div>
+    <div class="trust-item"><span class="trust-icon">📱</span> <span data-i18n="trust.mobile">All Devices</span></div>
+    <div class="trust-item"><span class="trust-icon">🌐</span> <span data-i18n="trust.hd">HD Quality</span></div>
+    <div class="trust-item"><span class="trust-icon">⚡</span> <span data-i18n="trust.fast">Fast Loading</span></div>
+    <div class="trust-item"><span class="trust-icon">🆓</span> <span data-i18n="trust.free">100% Free</span></div>
+  </div>
+</div>
+
+<!-- ═══ Video Section ════════════════════════════════════════════ -->
+<section class="video-section" id="video" aria-label="Live video stream">
+  <div class="container">
+    <h2 class="section-title reveal">
+      📺 <span data-i18n="video.title">Live Stream</span>
+    </h2>
+
+    <div class="content-sidebar">
+      <div>
+        <div class="video-wrapper reveal">
+          <div class="video-ratio">
+
+            <!-- Loading overlay -->
+            <div class="video-loading" id="video-loading">
+              <div style="text-align:center">
+                <div class="spinner"></div>
+                <p style="margin-top:14px;font-size:0.8rem;color:var(--text-muted)" data-i18n="video.loading">Loading stream...</p>
+              </div>
+            </div>
+
+            <!-- Play overlay -->
+            <div class="video-overlay" id="video-overlay" onclick="startVideo()" role="button" aria-label="Play video" tabindex="0">
+              <div class="play-btn-svg">
+                <svg width="28" height="28" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <p style="margin-top:16px;font-size:0.9rem;font-weight:600;color:rgba(255,255,255,0.85)" data-i18n="video.click">Click to Watch Live</p>
+            </div>
+
+            <!-- REPLACE src with your actual video URL -->
+            <video
+              id="main-video"
+              controls
+              preload="none"
+              poster="https://placehold.co/1280x720/0a0e1a/00d4ff?text=Cruz+Azul+vs+Pumas+UNAM"
+              style="display:none"
+              aria-label="Match live stream video"
+            >
+              <!-- Replace with actual stream sources -->
+              <source src="https://example.com/stream/cruz-azul-vs-pumas.mp4" type="video/mp4" />
+              <source src="https://example.com/stream/cruz-azul-vs-pumas.webm" type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
+
+          </div>
+
+          <div class="video-info-bar">
+            <div class="video-info-title" id="video-title-bar">Cruz Azul vs Pumas UNAM — Liga MX</div>
+            <div class="video-actions">
+              <button class="icon-btn" onclick="toggleFullscreen()" aria-label="Fullscreen">⛶ <span data-i18n="video.fullscreen">Fullscreen</span></button>
+              <button class="icon-btn" onclick="shareMatch()" aria-label="Share">🔗 <span data-i18n="video.share">Share</span></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- AD SLOT 2: Video Area Banner -->
+        <!-- Paste ad code here -->
+        <div class="ad-slot ad-video">
+          📢 AD SLOT 2 — Video Area Banner (728×60 / 320×50 mobile)
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar" aria-label="Sidebar">
+        <!-- AD SLOT 3: Sidebar Ad (Desktop) -->
+        <!-- <script>
+  atOptions = {
+    'key' : '87c0778a6ed56b4e01193d4338a6e3ca',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://cavitybetween.com/87c0778a6ed56b4e01193d4338a6e3ca/invoke.js"></script>
+ -->
+        <div class="ad-slot ad-sidebar" style="display:flex;align-items:center;justify-content:center">
+          📢 AD SLOT 3 — Sidebar (300×250)
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ AD SLOT 4: In-Content Banner ═════════════════════════════ -->
+<!-- <script>
+  atOptions = {
+    'key' : 'f66a1d80db09bcd7aa9d63bd7fe37f9a',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://cavitybetween.com/f66a1d80db09bcd7aa9d63bd7fe37f9a/invoke.js"></script>
+ -->
+<div class="container">
+  <div class="ad-slot ad-incontent reveal">
+    📢 AD SLOT 4 — In-Content Banner (728×90 / 320×50 mobile)
+  </div>
+</div>
+
+<!-- ═══ Match Statistics ══════════════════════════════════════════ -->
+<section class="section" id="stats" aria-label="Match statistics">
+  <div class="container">
+    <h2 class="section-title reveal">
+      📊 <span data-i18n="stats.title">Match Statistics</span>
+    </h2>
+
+    <div class="stats-grid reveal">
+      <div class="stat-card">
+        <div class="stat-val">62%</div>
+        <div class="stat-label" data-i18n="stat.possession">Possession</div>
+        <div class="stat-bar-row">
+          <span class="stat-team-name">CRU</span>
+          <div class="stat-bar-wrap"><div class="stat-bar-fill" style="width:62%"></div></div>
+          <span class="stat-team-name">38%</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">8</div>
+        <div class="stat-label" data-i18n="stat.shots">Shots on Goal</div>
+        <div class="stat-bar-row">
+          <span class="stat-team-name">CRU</span>
+          <div class="stat-bar-wrap"><div class="stat-bar-fill" style="width:57%"></div></div>
+          <span class="stat-team-name">6</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">4</div>
+        <div class="stat-label" data-i18n="stat.corners">Corners</div>
+        <div class="stat-bar-row">
+          <span class="stat-team-name">CRU</span>
+          <div class="stat-bar-wrap"><div class="stat-bar-fill" style="width:50%"></div></div>
+          <span class="stat-team-name">4</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">87%</div>
+        <div class="stat-label" data-i18n="stat.passes">Pass Accuracy</div>
+        <div class="stat-bar-row">
+          <span class="stat-team-name">CRU</span>
+          <div class="stat-bar-wrap"><div class="stat-bar-fill" style="width:65%"></div></div>
+          <span class="stat-team-name">79%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Recommended Sports Apps ══════════════════════════════════ -->
+<section class="section" style="background:var(--bg-secondary)" aria-label="Sports apps">
+  <div class="container">
+    <h2 class="section-title reveal">
+      📱 <span data-i18n="apps.title">Recommended Sports Apps</span>
+    </h2>
+    <div class="cards-grid">
+
+      <div class="aff-card reveal">
+        <div class="aff-img">📱</div>
+        <div class="aff-body">
+          <div class="aff-tag" data-i18n="apps.tag.official">Official App</div>
+          <div class="aff-title" data-i18n="apps.ligamx.title">Liga MX Official App</div>
+          <div class="aff-desc" data-i18n="apps.ligamx.desc">Live scores, stats, highlights and more for all Liga MX matches.</div>
+          <div class="aff-cta">
+            <a href="#" class="btn btn-secondary" style="width:100%;justify-content:center;font-size:0.85rem;padding:10px 20px" data-i18n="apps.download">Download Free</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="aff-card reveal">
+        <div class="aff-img">⚽</div>
+        <div class="aff-body">
+          <div class="aff-tag" data-i18n="apps.tag.sports">Sports Tracker</div>
+          <div class="aff-title" data-i18n="apps.sofascore.title">SofaScore</div>
+          <div class="aff-desc" data-i18n="apps.sofascore.desc">Real-time scores, lineups, and in-depth football statistics worldwide.</div>
+          <div class="aff-cta">
+            <a href="#" class="btn btn-secondary" style="width:100%;justify-content:center;font-size:0.85rem;padding:10px 20px" data-i18n="apps.getapp">Get App</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="aff-card reveal">
+        <div class="aff-img">📊</div>
+        <div class="aff-body">
+          <div class="aff-tag" data-i18n="apps.tag.stats">Statistics</div>
+          <div class="aff-title" data-i18n="apps.flashscore.title">FlashScore</div>
+          <div class="aff-desc" data-i18n="apps.flashscore.desc">Live scores and notifications for thousands of competitions globally.</div>
+          <div class="aff-cta">
+            <a href="#" class="btn btn-secondary" style="width:100%;justify-content:center;font-size:0.85rem;padding:10px 20px" data-i18n="apps.install">Install Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Betting Partner Section ════════════════════════════════════ -->
+<section class="section" aria-label="Betting partners">
+  <div class="container">
+    <h2 class="section-title reveal">
+      🎲 <span data-i18n="betting.title">Betting Partners</span>
+    </h2>
+    <div style="padding:14px;border-radius:var(--radius-sm);background:rgba(245,166,35,0.07);border:1px solid rgba(245,166,35,0.2);margin-bottom:24px;font-size:0.8rem;color:var(--accent-gold)" class="reveal">
+      ⚠️ <span data-i18n="betting.disclaimer">18+ only. Gamble responsibly. Betting involves risk of financial loss.</span>
+    </div>
+    <div class="cards-grid">
+
+      <div class="aff-card reveal">
+        <div class="aff-img" style="background:linear-gradient(135deg,#1a3a1a,#0d1a0d);color:#22c55e">🏆</div>
+        <div class="aff-body">
+          <div class="aff-tag" style="color:var(--accent-green)" data-i18n="bet.tag.bonus">Welcome Bonus</div>
+          <div class="aff-title" data-i18n="bet.partner1.title">BetPartner Placeholder</div>
+          <div class="aff-desc" data-i18n="bet.partner1.desc">Up to $200 welcome bonus on your first deposit. T&Cs apply.</div>
+          <div class="aff-cta">
+            <a href="#" class="btn btn-outline-gold" style="width:100%;justify-content:center;font-size:0.85rem;padding:10px 20px" data-i18n="bet.cta">Claim Offer →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="aff-card reveal">
+        <div class="aff-img" style="background:linear-gradient(135deg,#1a1a3a,#0d0d1a);color:#818cf8">🎯</div>
+        <div class="aff-body">
+          <div class="aff-tag" style="color:#818cf8" data-i18n="bet.tag.odds">Best Odds</div>
+          <div class="aff-title" data-i18n="bet.partner2.title">OddsBook Placeholder</div>
+          <div class="aff-desc" data-i18n="bet.partner2.desc">Best in-play odds for Liga MX. Live betting on every match.</div>
+          <div class="aff-cta">
+            <a href="#" class="btn btn-outline-gold" style="width:100%;justify-content:center;font-size:0.85rem;padding:10px 20px" data-i18n="bet.cta">Claim Offer →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Merchandise Section ════════════════════════════════════════ -->
+<section class="section" style="background:var(--bg-secondary)" aria-label="Sports merchandise">
+  <div class="container">
+    <h2 class="section-title reveal">
+      👕 <span data-i18n="merch.title">Official Merchandise</span>
+    </h2>
+    <div class="cards-grid">
+
+      <div class="aff-card reveal">
+        <div class="aff-img">🔵</div>
+        <div class="aff-body">
+          <div class="aff-tag" data-i18n="merch.tag.jersey">Official Jersey</div>
+          <div class="aff-title" data-i18n="merch.cruz.title">Cruz Azul 2026 Home Kit</div>
+          <div class="aff-desc" data-i18n="merch.cruz.desc">Show your support with the official Cruz Azul home jersey. Limited stock.</div>
+          <div class="aff-cta">
+            <a href="#" class="btn btn-primary" style="width:100%;justify-content:center;font-size:0.85rem;padding:10px 20px" data-i18n="merch.buy">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="aff-card reveal">
+        <div class="aff-img">🟡</div>
+        <div class="aff-body">
+          <div class="aff-tag" data-i18n="merch.tag.jersey">Official Jersey</div>
+          <div class="aff-title" data-i18n="merch.pumas.title">Pumas UNAM 2026 Home Kit</div>
+          <div class="aff-desc" data-i18n="merch.pumas.desc">Rep the Pumas with the official 2026 home kit. Authentic quality.</div>
+          <div class="aff-cta">
+            <a href="#" class="btn btn-primary" style="width:100%;justify-content:center;font-size:0.85rem;padding:10px 20px" data-i18n="merch.buy">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="aff-card reveal">
+        <div class="aff-img">⚽</div>
+        <div class="aff-body">
+          <div class="aff-tag" data-i18n="merch.tag.ball">Match Ball</div>
+          <div class="aff-title" data-i18n="merch.ball.title">Liga MX Official Match Ball</div>
+          <div class="aff-desc" data-i18n="merch.ball.desc">The same ball used in official Liga MX matches. Pro-grade quality.</div>
+          <div class="aff-cta">
+            <a href="#" class="btn btn-primary" style="width:100%;justify-content:center;font-size:0.85rem;padding:10px 20px" data-i18n="merch.buy">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Tickets Section ════════════════════════════════════════════ -->
+<section class="section" aria-label="Match tickets">
+  <div class="container">
+    <h2 class="section-title reveal">
+      🎟️ <span data-i18n="tickets.title">Get Match Tickets</span>
+    </h2>
+    <div class="cards-grid">
+
+      <div class="aff-card reveal">
+        <div class="aff-img" style="background:linear-gradient(135deg,#1a0d0d,#3a1a1a);font-size:2rem">🎟️</div>
+        <div class="aff-body">
+          <div class="aff-tag" data-i18n="tickets.tag.primary">Primary Market</div>
+          <div class="aff-title" data-i18n="tickets.primary.title">Official Tickets</div>
+          <div class="aff-desc" data-i18n="tickets.primary.desc">Purchase official Cruz Azul vs Pumas UNAM tickets directly from the venue.</div>
+          <div class="aff-cta">
+            <a href="#" class="btn btn-primary" style="width:100%;justify-content:center;font-size:0.85rem;padding:10px 20px" data-i18n="tickets.buy">Buy Tickets</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="aff-card reveal">
+        <div class="aff-img" style="background:linear-gradient(135deg,#0d1a0d,#1a3a1a);font-size:2rem">🏟️</div>
+        <div class="aff-body">
+          <div class="aff-tag" data-i18n="tickets.tag.secondary">Resale Market</div>
+          <div class="aff-title" data-i18n="tickets.secondary.title">StubHub / Viagogo</div>
+          <div class="aff-desc" data-i18n="tickets.secondary.desc">Find resale tickets for any price point. Guaranteed entry or money back.</div>
+          <div class="aff-cta">
+            <a href="#" class="btn btn-outline-gold" style="width:100%;justify-content:center;font-size:0.85rem;padding:10px 20px" data-i18n="tickets.find">Find Tickets</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Social Share ══════════════════════════════════════════════ -->
+<div class="container" aria-label="Social sharing">
+  <h3 style="text-align:center;font-family:var(--font-display);font-size:1rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.1em;margin-bottom:0" class="reveal" data-i18n="share.title">Share This Match</h3>
+  <div class="social-bar reveal">
+    <a href="#" onclick="shareTwitter(event)" class="social-btn tw" aria-label="Share on Twitter">🐦 Twitter / X</a>
+    <a href="#" onclick="shareFacebook(event)" class="social-btn fb" aria-label="Share on Facebook">📘 Facebook</a>
+    <a href="#" onclick="shareWhatsApp(event)" class="social-btn wa" aria-label="Share on WhatsApp">💬 WhatsApp</a>
+    <a href="#" onclick="shareTelegram(event)" class="social-btn tg" aria-label="Share on Telegram">✈️ Telegram</a>
+    <button onclick="copyLink()" class="social-btn cp" aria-label="Copy link">📋 <span data-i18n="share.copy">Copy Link</span></button>
+  </div>
+</div>
+
+<!-- ═══ FAQ Section ════════════════════════════════════════════════ -->
+<section class="section" id="faq" style="background:var(--bg-secondary)" aria-label="Frequently asked questions">
+  <div class="container">
+    <h2 class="section-title reveal">
+      ❓ <span data-i18n="faq.title">Frequently Asked Questions</span>
+    </h2>
+    <div class="faq-list" id="faq-list" role="list"></div>
+  </div>
+</section>
+
+<!-- ═══ Footer ════════════════════════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">⚽ FUTBOLLIVE</div>
+      <div class="footer-links">
+        <a href="#" data-i18n="footer.home">Home</a>
+        <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="#" data-i18n="footer.terms">Terms of Service</a>
+        <a href="#" data-i18n="footer.dmca">DMCA</a>
+        <a href="#" data-i18n="footer.contact">Contact</a>
+      </div>
+      <p class="footer-copy" data-i18n="footer.copy">
+        © 2026 FutbolLive. This site does not host any video content. We aggregate publicly available streams. All trademarks belong to their respective owners.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ AD SLOT 5: Sticky Mobile Footer Ad ═══════════════════════ -->
+<!-- <script>
+  atOptions = {
+    'key' : 'aab107d253363138c97e694b788f6d2b',
+    'format' : 'iframe',
+    'height' : 60,
+    'width' : 468,
+    'params' : {}
+  };
+</script>
+<script src="https://cavitybetween.com/aab107d253363138c97e694b788f6d2b/invoke.js"></script>
+ -->
+<div class="ad-sticky-footer" role="complementary" aria-label="Advertisement">
+  📢 AD SLOT 5 — Sticky Footer (320×50 mobile / 728×60 desktop)
+</div>
+
+<!-- ═══ Floating Buttons ══════════════════════════════════════════ -->
+<a href="#video" id="float-watch" role="button" aria-label="Watch now">
+  ▶ <span data-i18n="float.watch">Watch Now</span>
+</a>
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">▲</button>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!--                     JAVASCRIPT                                  -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<script>
+  /* ─── MATCH CONFIGURATION ──────────────────────────────────────
+     Change only this object to set up any future soccer match.
+  ─────────────────────────────────────────────────────────────── */
+  const MATCH = {
+    homeTeam:    "Cruz Azul",
+    awayTeam:    "Pumas UNAM",
+    homeAbbr:    "CRU",
+    awayAbbr:    "PUM",
+    competition: "Liga MX",
+    date:        "2026-05-30",   // YYYY-MM-DD
+    kickoff:     "20:00",        // 24h local time
+    timezone:    "America/Mexico_City",
+    venue:       "Estadio Azteca",
+    homeLogo:    "home-logo.png",
+    awayLogo:    "away-logo.png",
+    isLive:      false,           // set true when match is live
+  };
+
+  /* ─── i18n Translations ────────────────────────────────────── */
+  const I18N = {
+    en: {
+      "nav.stream":           "Live Stream",
+      "nav.stats":            "Stats",
+      "nav.faq":              "FAQ",
+      "badge.live":           "🔴 LIVE NOW",
+      "badge.soon":           "🕐 Upcoming Match",
+      "hero.venue":           "Estadio Azteca",
+      "cd.days":              "Days",
+      "cd.hours":             "Hours",
+      "cd.mins":              "Mins",
+      "cd.secs":              "Secs",
+      "cta.watch":            "▶ Watch Now Live",
+      "cta.share":            "🔗 Share Match",
+      "trust.secure":         "Secure Streaming",
+      "trust.mobile":         "All Devices",
+      "trust.hd":             "HD Quality",
+      "trust.fast":           "Fast Loading",
+      "trust.free":           "100% Free",
+      "video.title":          "Live Stream",
+      "video.loading":        "Loading stream...",
+      "video.click":          "Click to Watch Live",
+      "video.fullscreen":     "Fullscreen",
+      "video.share":          "Share",
+      "stats.title":          "Match Statistics",
+      "stat.possession":      "Possession",
+      "stat.shots":           "Shots on Goal",
+      "stat.corners":         "Corners",
+      "stat.passes":          "Pass Accuracy",
+      "apps.title":           "Recommended Sports Apps",
+      "apps.tag.official":    "Official App",
+      "apps.tag.sports":      "Sports Tracker",
+      "apps.tag.stats":       "Statistics",
+      "apps.ligamx.title":    "Liga MX Official App",
+      "apps.ligamx.desc":     "Live scores, stats, highlights and more for all Liga MX matches.",
+      "apps.sofascore.title":  "SofaScore",
+      "apps.sofascore.desc":  "Real-time scores, lineups, and in-depth football statistics worldwide.",
+      "apps.flashscore.title": "FlashScore",
+      "apps.flashscore.desc": "Live scores and notifications for thousands of competitions globally.",
+      "apps.download":        "Download Free",
+      "apps.getapp":          "Get App",
+      "apps.install":         "Install Now",
+      "betting.title":        "Betting Partners",
+      "betting.disclaimer":   "18+ only. Gamble responsibly. Betting involves risk of financial loss.",
+      "bet.tag.bonus":        "Welcome Bonus",
+      "bet.partner1.title":   "BetPartner Placeholder",
+      "bet.partner1.desc":    "Up to $200 welcome bonus on your first deposit. T&Cs apply.",
+      "bet.tag.odds":         "Best Odds",
+      "bet.partner2.title":   "OddsBook Placeholder",
+      "bet.partner2.desc":    "Best in-play odds for Liga MX. Live betting on every match.",
+      "bet.cta":              "Claim Offer →",
+      "merch.title":          "Official Merchandise",
+      "merch.tag.jersey":     "Official Jersey",
+      "merch.cruz.title":     "Cruz Azul 2026 Home Kit",
+      "merch.cruz.desc":      "Show your support with the official Cruz Azul home jersey. Limited stock.",
+      "merch.pumas.title":    "Pumas UNAM 2026 Home Kit",
+      "merch.pumas.desc":     "Rep the Pumas with the official 2026 home kit. Authentic quality.",
+      "merch.tag.ball":       "Match Ball",
+      "merch.ball.title":     "Liga MX Official Match Ball",
+      "merch.ball.desc":      "The same ball used in official Liga MX matches. Pro-grade quality.",
+      "merch.buy":            "Shop Now",
+      "tickets.title":        "Get Match Tickets",
+      "tickets.tag.primary":  "Primary Market",
+      "tickets.primary.title":"Official Tickets",
+      "tickets.primary.desc": "Purchase official Cruz Azul vs Pumas UNAM tickets directly from the venue.",
+      "tickets.tag.secondary":"Resale Market",
+      "tickets.secondary.title":"StubHub / Viagogo",
+      "tickets.secondary.desc":"Find resale tickets for any price point. Guaranteed entry or money back.",
+      "tickets.buy":          "Buy Tickets",
+      "tickets.find":         "Find Tickets",
+      "share.title":          "Share This Match",
+      "share.copy":           "Copy Link",
+      "faq.title":            "Frequently Asked Questions",
+      "float.watch":          "Watch Now",
+      "footer.home":          "Home",
+      "footer.privacy":       "Privacy Policy",
+      "footer.terms":         "Terms of Service",
+      "footer.dmca":          "DMCA",
+      "footer.contact":       "Contact",
+      "footer.copy":          "© 2026 FutbolLive. This site does not host any video content. We aggregate publicly available streams. All trademarks belong to their respective owners.",
+    },
+    es: {
+      "nav.stream":           "En Vivo",
+      "nav.stats":            "Estadísticas",
+      "nav.faq":              "Preguntas",
+      "badge.live":           "🔴 EN VIVO",
+      "badge.soon":           "🕐 Próximo Partido",
+      "hero.venue":           "Estadio Azteca",
+      "cd.days":              "Días",
+      "cd.hours":             "Horas",
+      "cd.mins":              "Mins",
+      "cd.secs":              "Segs",
+      "cta.watch":            "▶ Ver Ahora — Gratis",
+      "cta.share":            "🔗 Compartir Partido",
+      "trust.secure":         "Transmisión Segura",
+      "trust.mobile":         "Todos los Dispositivos",
+      "trust.hd":             "Calidad HD",
+      "trust.fast":           "Carga Rápida",
+      "trust.free":           "100% Gratis",
+      "video.title":          "Transmisión en Vivo",
+      "video.loading":        "Cargando transmisión...",
+      "video.click":          "Haz clic para ver en vivo",
+      "video.fullscreen":     "Pantalla Completa",
+      "video.share":          "Compartir",
+      "stats.title":          "Estadísticas del Partido",
+      "stat.possession":      "Posesión",
+      "stat.shots":           "Tiros a Portería",
+      "stat.corners":         "Córners",
+      "stat.passes":          "Precisión de Pases",
+      "apps.title":           "Apps Deportivas Recomendadas",
+      "apps.tag.official":    "App Oficial",
+      "apps.tag.sports":      "Seguidor Deportivo",
+      "apps.tag.stats":       "Estadísticas",
+      "apps.ligamx.title":    "App Oficial de la Liga MX",
+      "apps.ligamx.desc":     "Marcadores en vivo, estadísticas y más de todos los partidos de la Liga MX.",
+      "apps.sofascore.title":  "SofaScore",
+      "apps.sofascore.desc":  "Marcadores en tiempo real, alineaciones y estadísticas de fútbol a nivel mundial.",
+      "apps.flashscore.title": "FlashScore",
+      "apps.flashscore.desc": "Marcadores en vivo y notificaciones de miles de competiciones.",
+      "apps.download":        "Descargar Gratis",
+      "apps.getapp":          "Obtener App",
+      "apps.install":         "Instalar Ahora",
+      "betting.title":        "Socios de Apuestas",
+      "betting.disclaimer":   "Solo mayores de 18 años. Apuesta con responsabilidad.",
+      "bet.tag.bonus":        "Bono de Bienvenida",
+      "bet.partner1.title":   "Socio de Apuestas",
+      "bet.partner1.desc":    "Hasta $200 de bono en tu primer depósito. Se aplican T&C.",
+      "bet.tag.odds":         "Mejores Cuotas",
+      "bet.partner2.title":   "Libro de Cuotas",
+      "bet.partner2.desc":    "Mejores cuotas en vivo para la Liga MX. Apuestas en tiempo real.",
+      "bet.cta":              "Reclamar Oferta →",
+      "merch.title":          "Mercancía Oficial",
+      "merch.tag.jersey":     "Jersey Oficial",
+      "merch.cruz.title":     "Jersey Local Cruz Azul 2026",
+      "merch.cruz.desc":      "Muestra tu apoyo con el jersey oficial de Cruz Azul. Stock limitado.",
+      "merch.pumas.title":    "Jersey Local Pumas UNAM 2026",
+      "merch.pumas.desc":     "Apoya a los Pumas con el jersey oficial 2026. Calidad auténtica.",
+      "merch.tag.ball":       "Balón Oficial",
+      "merch.ball.title":     "Balón Oficial Liga MX",
+      "merch.ball.desc":      "El mismo balón usado en los partidos oficiales de la Liga MX.",
+      "merch.buy":            "Comprar Ahora",
+      "tickets.title":        "Conseguir Entradas",
+      "tickets.tag.primary":  "Mercado Primario",
+      "tickets.primary.title":"Entradas Oficiales",
+      "tickets.primary.desc": "Compra entradas oficiales directamente en el estadio.",
+      "tickets.tag.secondary":"Reventa",
+      "tickets.secondary.title":"StubHub / Viagogo",
+      "tickets.secondary.desc":"Encuentra entradas de reventa. Entrada garantizada o reembolso.",
+      "tickets.buy":          "Comprar Entradas",
+      "tickets.find":         "Buscar Entradas",
+      "share.title":          "Compartir Este Partido",
+      "share.copy":           "Copiar Enlace",
+      "faq.title":            "Preguntas Frecuentes",
+      "float.watch":          "Ver Ahora",
+      "footer.home":          "Inicio",
+      "footer.privacy":       "Política de Privacidad",
+      "footer.terms":         "Términos de Servicio",
+      "footer.dmca":          "DMCA",
+      "footer.contact":       "Contacto",
+      "footer.copy":          "© 2026 FutbolLive. Este sitio no aloja contenido de video. Todas las marcas pertenecen a sus respectivos dueños.",
+    },
+    pt: {
+      "nav.stream":           "Ao Vivo",
+      "nav.stats":            "Estatísticas",
+      "nav.faq":              "Perguntas",
+      "badge.live":           "🔴 AO VIVO",
+      "badge.soon":           "🕐 Próximo Jogo",
+      "cd.days":              "Dias",
+      "cd.hours":             "Horas",
+      "cd.mins":              "Mins",
+      "cd.secs":              "Segs",
+      "cta.watch":            "▶ Assistir Agora — Grátis",
+      "cta.share":            "🔗 Compartilhar",
+      "trust.secure":         "Transmissão Segura",
+      "trust.mobile":         "Todos Dispositivos",
+      "trust.hd":             "Qualidade HD",
+      "trust.fast":           "Carregamento Rápido",
+      "trust.free":           "100% Grátis",
+      "video.title":          "Transmissão ao Vivo",
+      "video.loading":        "Carregando transmissão...",
+      "video.click":          "Clique para ver ao vivo",
+      "video.fullscreen":     "Tela Cheia",
+      "video.share":          "Compartilhar",
+      "stats.title":          "Estatísticas da Partida",
+      "stat.possession":      "Posse de Bola",
+      "stat.shots":           "Chutes a Gol",
+      "stat.corners":         "Escanteios",
+      "stat.passes":          "Precisão de Passes",
+      "apps.title":           "Apps Esportivos Recomendados",
+      "apps.download":        "Baixar Grátis",
+      "apps.getapp":          "Baixar App",
+      "apps.install":         "Instalar Agora",
+      "betting.title":        "Parceiros de Apostas",
+      "betting.disclaimer":   "Apenas maiores de 18 anos. Aposte com responsabilidade.",
+      "bet.cta":              "Resgatar Oferta →",
+      "merch.title":          "Mercadoria Oficial",
+      "merch.buy":            "Comprar Agora",
+      "tickets.title":        "Ingressos para a Partida",
+      "tickets.buy":          "Comprar Ingressos",
+      "tickets.find":         "Encontrar Ingressos",
+      "share.title":          "Compartilhar Esta Partida",
+      "share.copy":           "Copiar Link",
+      "faq.title":            "Perguntas Frequentes",
+      "float.watch":          "Assistir Agora",
+      "footer.home":          "Início",
+      "footer.privacy":       "Política de Privacidade",
+      "footer.terms":         "Termos de Serviço",
+      "footer.dmca":          "DMCA",
+      "footer.contact":       "Contato",
+      "footer.copy":          "© 2026 FutbolLive. Este site não hospeda nenhum conteúdo de vídeo.",
+    },
+    fr: {
+      "nav.stream":           "En Direct",
+      "nav.stats":            "Stats",
+      "nav.faq":              "FAQ",
+      "badge.live":           "🔴 EN DIRECT",
+      "badge.soon":           "🕐 Match à Venir",
+      "cd.days":              "Jours",
+      "cd.hours":             "Heures",
+      "cd.mins":              "Mins",
+      "cd.secs":              "Secs",
+      "cta.watch":            "▶ Regarder — Gratuit",
+      "cta.share":            "🔗 Partager",
+      "trust.secure":         "Streaming Sécurisé",
+      "trust.mobile":         "Tous les Appareils",
+      "trust.hd":             "Qualité HD",
+      "trust.fast":           "Chargement Rapide",
+      "trust.free":           "100% Gratuit",
+      "video.title":          "Diffusion en Direct",
+      "video.loading":        "Chargement du flux...",
+      "video.click":          "Cliquez pour regarder en direct",
+      "video.fullscreen":     "Plein Écran",
+      "video.share":          "Partager",
+      "stats.title":          "Statistiques du Match",
+      "stat.possession":      "Possession",
+      "stat.shots":           "Tirs cadrés",
+      "stat.corners":         "Corners",
+      "stat.passes":          "Précision des passes",
+      "apps.title":           "Applications Sportives Recommandées",
+      "apps.download":        "Télécharger Gratuitement",
+      "apps.getapp":          "Obtenir l'App",
+      "apps.install":         "Installer Maintenant",
+      "betting.title":        "Partenaires de Paris",
+      "betting.disclaimer":   "18+ uniquement. Jouez de façon responsable.",
+      "bet.cta":              "Réclamer l'offre →",
+      "merch.title":          "Marchandise Officielle",
+      "merch.buy":            "Acheter Maintenant",
+      "tickets.title":        "Billets de Match",
+      "tickets.buy":          "Acheter des Billets",
+      "tickets.find":         "Trouver des Billets",
+      "share.title":          "Partager ce Match",
+      "share.copy":           "Copier le Lien",
+      "faq.title":            "Questions Fréquentes",
+      "float.watch":          "Regarder Maintenant",
+      "footer.home":          "Accueil",
+      "footer.privacy":       "Politique de Confidentialité",
+      "footer.terms":         "Conditions d'Utilisation",
+      "footer.dmca":          "DMCA",
+      "footer.contact":       "Contact",
+      "footer.copy":          "© 2026 FutbolLive. Ce site n'héberge aucun contenu vidéo.",
+    },
+    de: {
+      "nav.stream":           "Live-Stream",
+      "nav.stats":            "Statistiken",
+      "nav.faq":              "FAQ",
+      "badge.live":           "🔴 LIVE",
+      "badge.soon":           "🕐 Kommendes Spiel",
+      "cd.days":              "Tage",
+      "cd.hours":             "Stunden",
+      "cd.mins":              "Min",
+      "cd.secs":              "Sek",
+      "cta.watch":            "▶ Jetzt Ansehen — Kostenlos",
+      "cta.share":            "🔗 Spiel Teilen",
+      "trust.secure":         "Sicheres Streaming",
+      "trust.mobile":         "Alle Geräte",
+      "trust.hd":             "HD-Qualität",
+      "trust.fast":           "Schnelles Laden",
+      "trust.free":           "100% Kostenlos",
+      "video.title":          "Live-Stream",
+      "video.loading":        "Stream wird geladen...",
+      "video.click":          "Klicken zum Live-Ansehen",
+      "video.fullscreen":     "Vollbild",
+      "video.share":          "Teilen",
+      "stats.title":          "Spielstatistiken",
+      "stat.possession":      "Ballbesitz",
+      "stat.shots":           "Schüsse aufs Tor",
+      "stat.corners":         "Ecken",
+      "stat.passes":          "Passgenauigkeit",
+      "apps.title":           "Empfohlene Sport-Apps",
+      "apps.download":        "Kostenlos Herunterladen",
+      "apps.getapp":          "App Holen",
+      "apps.install":         "Jetzt Installieren",
+      "betting.title":        "Wettpartner",
+      "betting.disclaimer":   "Nur ab 18 Jahren. Spielen Sie verantwortungsbewusst.",
+      "bet.cta":              "Angebot Sichern →",
+      "merch.title":          "Offizielle Merchandise",
+      "merch.buy":            "Jetzt Kaufen",
+      "tickets.title":        "Spieltickets",
+      "tickets.buy":          "Tickets Kaufen",
+      "tickets.find":         "Tickets Finden",
+      "share.title":          "Dieses Spiel Teilen",
+      "share.copy":           "Link Kopieren",
+      "faq.title":            "Häufig Gestellte Fragen",
+      "float.watch":          "Jetzt Ansehen",
+      "footer.home":          "Startseite",
+      "footer.privacy":       "Datenschutzrichtlinie",
+      "footer.terms":         "Nutzungsbedingungen",
+      "footer.dmca":          "DMCA",
+      "footer.contact":       "Kontakt",
+      "footer.copy":          "© 2026 FutbolLive. Diese Website hostet keine Videoinhalte.",
+    },
+    it: {
+      "nav.stream":           "In Diretta",
+      "nav.stats":            "Statistiche",
+      "nav.faq":              "FAQ",
+      "badge.live":           "🔴 IN DIRETTA",
+      "badge.soon":           "🕐 Prossima Partita",
+      "cd.days":              "Giorni",
+      "cd.hours":             "Ore",
+      "cd.mins":              "Min",
+      "cd.secs":              "Sec",
+      "cta.watch":            "▶ Guarda Ora — Gratis",
+      "cta.share":            "🔗 Condividi",
+      "trust.secure":         "Streaming Sicuro",
+      "trust.mobile":         "Tutti i Dispositivi",
+      "trust.hd":             "Qualità HD",
+      "trust.fast":           "Caricamento Rapido",
+      "trust.free":           "100% Gratuito",
+      "video.title":          "Diretta Streaming",
+      "video.loading":        "Caricamento streaming...",
+      "video.click":          "Clicca per guardare in diretta",
+      "video.fullscreen":     "Schermo Intero",
+      "video.share":          "Condividi",
+      "stats.title":          "Statistiche della Partita",
+      "stat.possession":      "Possesso Palla",
+      "stat.shots":           "Tiri in Porta",
+      "stat.corners":         "Calci d'Angolo",
+      "stat.passes":          "Precisione Passaggi",
+      "apps.title":           "App Sportive Consigliate",
+      "apps.download":        "Scarica Gratis",
+      "apps.getapp":          "Ottieni App",
+      "apps.install":         "Installa Ora",
+      "betting.title":        "Partner Scommesse",
+      "betting.disclaimer":   "Solo maggiorenni. Gioca responsabilmente.",
+      "bet.cta":              "Riscatta Offerta →",
+      "merch.title":          "Merchandising Ufficiale",
+      "merch.buy":            "Compra Ora",
+      "tickets.title":        "Biglietti della Partita",
+      "tickets.buy":          "Acquista Biglietti",
+      "tickets.find":         "Trova Biglietti",
+      "share.title":          "Condividi questa Partita",
+      "share.copy":           "Copia Link",
+      "faq.title":            "Domande Frequenti",
+      "float.watch":          "Guarda Ora",
+      "footer.home":          "Home",
+      "footer.privacy":       "Privacy Policy",
+      "footer.terms":         "Termini di Servizio",
+      "footer.dmca":          "DMCA",
+      "footer.contact":       "Contatto",
+      "footer.copy":          "© 2026 FutbolLive. Questo sito non ospita alcun contenuto video.",
+    }
+  };
+
+  const FAQ_DATA = {
+    en: [
+      { q: "Is this stream free to watch?", a: "Yes! The stream is 100% free. No registration or payment required." },
+      { q: "What devices can I use to watch?", a: "You can watch on any modern browser — mobile, tablet, desktop, or smart TV." },
+      { q: "What if the stream is buffering?", a: "Try refreshing the page, lowering the video quality, or switching to a wired connection for better stability." },
+      { q: "Will there be Spanish commentary?", a: "Stream availability and commentary language depend on the source. Check the video player options." },
+      { q: "What time does the match start?", a: `The match kicks off at ${MATCH.kickoff} (${MATCH.timezone}) on ${MATCH.date}.` },
+      { q: "Can I watch replays after the match?", a: "Match replays are usually available 30–60 minutes after the final whistle. Check back on this page." },
+    ],
+    es: [
+      { q: "¿El streaming es gratuito?", a: "¡Sí! La transmisión es 100% gratuita. No requiere registro ni pago." },
+      { q: "¿En qué dispositivos puedo ver el partido?", a: "Puedes ver en cualquier navegador moderno: móvil, tablet, PC o smart TV." },
+      { q: "¿Qué hacer si hay cortes de señal?", a: "Intenta recargar la página, bajar la calidad del video o conectarte por cable." },
+      { q: "¿Habrá narración en español?", a: "Depende de la fuente del stream. Revisa las opciones del reproductor." },
+      { q: "¿A qué hora empieza el partido?", a: `El partido inicia a las ${MATCH.kickoff} (${MATCH.timezone}) el ${MATCH.date}.` },
+      { q: "¿Podré ver la repetición?", a: "Las repeticiones suelen estar disponibles 30–60 minutos después del pitazo final." },
+    ],
+    pt: [
+      { q: "A transmissão é gratuita?", a: "Sim! A transmissão é 100% gratuita. Não precisa de cadastro." },
+      { q: "Em quais dispositivos posso assistir?", a: "Você pode assistir em qualquer navegador moderno: celular, tablet, PC ou smart TV." },
+      { q: "O que fazer se o stream travar?", a: "Tente recarregar a página, reduzir a qualidade do vídeo ou usar uma conexão por cabo." },
+      { q: "Haverá narração em português?", a: "Depende da fonte do stream. Verifique as opções do player." },
+      { q: "Que horas começa a partida?", a: `A partida começa às ${MATCH.kickoff} (${MATCH.timezone}) em ${MATCH.date}.` },
+      { q: "Posso assistir a repetição?", a: "As repetições geralmente ficam disponíveis 30–60 minutos após o apito final." },
+    ],
+  };
+
+  /* ─── Language Logic ─────────────────────────────────────────── */
+  let currentLang = 'en';
+  const LANG_META = {
+    en: { flag: '🇺🇸', label: 'EN' },
+    es: { flag: '🇲🇽', label: 'ES' },
+    pt: { flag: '🇧🇷', label: 'PT' },
+    fr: { flag: '🇫🇷', label: 'FR' },
+    de: { flag: '🇩🇪', label: 'DE' },
+    it: { flag: '🇮🇹', label: 'IT' },
+  };
+
+  function detectLang() {
+    const stored = localStorage.getItem('pref_lang');
+    if (stored && I18N[stored]) return stored;
+    const nav = (navigator.language || navigator.userLanguage || 'en').toLowerCase().slice(0,2);
+    return I18N[nav] ? nav : 'en';
+  }
+
+  function setLang(lang) {
+    currentLang = lang;
+    localStorage.setItem('pref_lang', lang);
+    document.documentElement.lang = lang;
+    document.getElementById('lang-modal').style.display = 'none';
+    applyTranslations();
+    updateLangToggle();
+    buildFAQ();
+  }
+
+  function showLangModal() {
+    document.getElementById('lang-modal').style.display = 'flex';
+  }
+
+  function applyTranslations() {
+    const dict = { ...I18N.en, ...(I18N[currentLang] || {}) };
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key]) el.textContent = dict[key];
+    });
+    // Update live badge
+    const badge = document.getElementById('match-badge');
+    if (badge) {
+      if (MATCH.isLive) {
+        badge.className = 'badge badge-live';
+        badge.textContent = dict['badge.live'];
+      } else {
+        badge.className = 'badge badge-soon';
+        badge.textContent = dict['badge.soon'];
+      }
+    }
+  }
+
+  function updateLangToggle() {
+    const m = LANG_META[currentLang] || LANG_META.en;
+    document.getElementById('current-flag').textContent = m.flag;
+    document.getElementById('current-lang-label').textContent = m.label;
+  }
+
+  /* ─── Match Data Injection ───────────────────────────────────── */
+  function injectMatchData() {
+    // Hero
+    document.getElementById('hero-competition').textContent = MATCH.competition;
+    document.getElementById('hero-home').textContent = MATCH.homeTeam;
+    document.getElementById('hero-away').textContent = MATCH.awayTeam;
+    document.getElementById('home-abbr').textContent = MATCH.homeAbbr;
+    document.getElementById('away-abbr').textContent = MATCH.awayAbbr;
+
+    // Logos (lazy)
+    const homeImg = document.getElementById('home-logo-img');
+    const awayImg = document.getElementById('away-logo-img');
+    if (MATCH.homeLogo && MATCH.homeLogo !== 'home-logo.png') {
+      homeImg.src = MATCH.homeLogo;
+      homeImg.style.display = 'block';
+      document.getElementById('home-abbr').style.display = 'none';
+    }
+    if (MATCH.awayLogo && MATCH.awayLogo !== 'away-logo.png') {
+      awayImg.src = MATCH.awayLogo;
+      awayImg.style.display = 'block';
+      document.getElementById('away-abbr').style.display = 'none';
+    }
+
+    // Date/time display
+    const d = new Date(MATCH.date + 'T' + MATCH.kickoff);
+    const dateOpts = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
+    document.getElementById('hero-date').textContent = d.toLocaleDateString(undefined, dateOpts);
+    document.getElementById('hero-time').textContent = MATCH.kickoff;
+
+    // Page title & video bar
+    const title = `${MATCH.homeTeam} vs ${MATCH.awayTeam} — ${MATCH.competition} Live`;
+    document.getElementById('page-title').textContent = title + ' | Stream';
+    document.getElementById('video-title-bar').textContent = `${MATCH.homeTeam} vs ${MATCH.awayTeam} — ${MATCH.competition}`;
+  }
+
+  /* ─── Countdown Timer ────────────────────────────────────────── */
+  function updateCountdown() {
+    const now = Date.now();
+    const target = new Date(MATCH.date + 'T' + MATCH.kickoff).getTime();
+    const diff = target - now;
+
+    if (diff <= 0) {
+      ['cd-days','cd-hours','cd-mins','cd-secs'].forEach((id, i) => {
+        document.getElementById(id).textContent = '00';
+      });
+      return;
+    }
+    const days  = Math.floor(diff / 86400000);
+    const hours = Math.floor((diff % 86400000) / 3600000);
+    const mins  = Math.floor((diff % 3600000) / 60000);
+    const secs  = Math.floor((diff % 60000) / 1000);
+
+    document.getElementById('cd-days').textContent  = String(days).padStart(2,'0');
+    document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
+    document.getElementById('cd-mins').textContent  = String(mins).padStart(2,'0');
+    document.getElementById('cd-secs').textContent  = String(secs).padStart(2,'0');
+  }
+
+  /* ─── Video Player ───────────────────────────────────────────── */
+  function startVideo() {
+    const overlay = document.getElementById('video-overlay');
+    const loading = document.getElementById('video-loading');
+    const video   = document.getElementById('main-video');
+    overlay.classList.add('hidden');
+    loading.style.display = 'flex';
+    video.style.display = 'block';
+    video.load();
+    setTimeout(() => {
+      loading.style.display = 'none';
+      video.play().catch(() => {});
+    }, 1200);
+  }
+
+  function toggleFullscreen() {
+    const video = document.getElementById('main-video');
+    if (!document.fullscreenElement) {
+      (video.requestFullscreen || video.webkitRequestFullscreen || video.mozRequestFullScreen).call(video);
+    } else {
+      (document.exitFullscreen || document.webkitExitFullscreen || document.mozCancelFullScreen).call(document);
+    }
+  }
+
+  // Keyboard support for play overlay
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Enter' && document.activeElement === document.getElementById('video-overlay')) {
+      startVideo();
+    }
+  });
+
+  /* ─── FAQ Builder ─────────────────────────────────────────────── */
+  function buildFAQ() {
+    const faqs = FAQ_DATA[currentLang] || FAQ_DATA.en;
+    const list = document.getElementById('faq-list');
+    list.innerHTML = '';
+    faqs.forEach((item, i) => {
+      const div = document.createElement('div');
+      div.className = 'faq-item';
+      div.setAttribute('role', 'listitem');
+      div.innerHTML = `
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-${i}">
+          ${item.q}
+          <span class="faq-arrow" aria-hidden="true">▼</span>
+        </button>
+        <div class="faq-a" id="faq-a-${i}" role="region">
+          <div class="faq-a-inner">${item.a}</div>
+        </div>`;
+      div.querySelector('.faq-q').addEventListener('click', () => {
+        const isOpen = div.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(el => {
+          el.classList.remove('open');
+          el.querySelector('.faq-q').setAttribute('aria-expanded','false');
+        });
+        if (!isOpen) {
+          div.classList.add('open');
+          div.querySelector('.faq-q').setAttribute('aria-expanded','true');
+        }
+      });
+      list.appendChild(div);
+    });
+  }
+
+  /* ─── Social Share ───────────────────────────────────────────── */
+  const shareUrl  = encodeURIComponent(window.location.href);
+  const shareText = encodeURIComponent(`Watch ${MATCH.homeTeam} vs ${MATCH.awayTeam} — ${MATCH.competition} Live!`);
+
+  function shareTwitter(e) {
+    e.preventDefault();
+    window.open(`https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`, '_blank', 'noopener');
+  }
+  function shareFacebook(e) {
+    e.preventDefault();
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, '_blank', 'noopener');
+  }
+  function shareWhatsApp(e) {
+    e.preventDefault();
+    window.open(`https://api.whatsapp.com/send?text=${shareText}%20${shareUrl}`, '_blank', 'noopener');
+  }
+  function shareTelegram(e) {
+    e.preventDefault();
+    window.open(`https://t.me/share/url?url=${shareUrl}&text=${shareText}`, '_blank', 'noopener');
+  }
+  function copyLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.querySelector('.social-btn.cp');
+      const orig = btn.textContent;
+      btn.textContent = '✅ Copied!';
+      setTimeout(() => btn.textContent = orig, 2000);
+    });
+  }
+  function shareMatch() {
+    if (navigator.share) {
+      navigator.share({ title: `${MATCH.homeTeam} vs ${MATCH.awayTeam}`, url: window.location.href });
+    } else {
+      copyLink();
+    }
+  }
+
+  /* ─── Scroll Reveal ─────────────────────────────────────────── */
+  function initReveal() {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }});
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  }
+
+  /* ─── Back to Top ────────────────────────────────────────────── */
+  window.addEventListener('scroll', () => {
+    const btn = document.getElementById('back-top');
+    btn.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+
+  /* ─── Init ───────────────────────────────────────────────────── */
+  document.addEventListener('DOMContentLoaded', () => {
+    injectMatchData();
+
+    // Language
+    const lang = detectLang();
+    const stored = localStorage.getItem('pref_lang');
+    if (stored && I18N[stored]) {
+      setLang(stored);
+      document.getElementById('lang-modal').style.display = 'none';
+    } else {
+      currentLang = lang;
+      applyTranslations();
+      updateLangToggle();
+      buildFAQ();
+      // Show modal only on first visit
+      if (!stored) {
+        document.getElementById('lang-modal').style.display = 'flex';
+      }
+    }
+
+    // Countdown
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Video loading simulation
+    setTimeout(() => {
+      document.getElementById('video-loading').style.display = 'none';
+    }, 800);
+
+    // Scroll reveal
+    initReveal();
+  });
+</script>
+</body>
+</html>
